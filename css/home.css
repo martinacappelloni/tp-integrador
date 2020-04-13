@@ -1,15 +1,91 @@
 * {
     box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 body {
-    display: flex;
-    justify-content: center;
     background-color:black;
     margin: 0px;    
 }
 header {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
 }
-
+.logo img {
+    border-radius: 50%;
+    width: 35vw;
+    margin: 30px auto;
+}
+.links ul {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+.links ul li {
+    margin: 10px;
+}
+.links ul li a {
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.buscador {
+    border: 2px solid white;
+    color: white;
+}
+.rankings .tracks {
+    border: 2px solid white;
+    color: white;
+    width: 100%;
+    height: 30vh;
+}
+.rankings .albums {
+    border: 2px solid white;
+    color: white;
+    width: 100%;
+    height: 30vh;
+}
+.rankings .artists {
+    border: 2px solid white;
+    color: white;
+    width: 100%;
+    height: 30vh;
+}
+footer .logo img {
+    display: flex;
+    align-items: center;
+}
+.nombres {
+    margin: 0;
+    padding: 0;
+}
+.nombres li  {
+    margin: 5px;
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+@media only screen and (min-width:768px) {
+    .header {
+        flex-direction: row;
+    }
+    .links ul {
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+        padding: 0;  
+    }
+    .logo img {
+    }
+}
