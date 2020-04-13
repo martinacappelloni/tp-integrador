@@ -4,7 +4,7 @@
 body {
     display: flex;
     justify-content: center;
-    background-color:grey;
+    background-color:black;
     margin: 0px;    
 }
 header {
@@ -12,3 +12,4 @@ header {
     flex-direction: row;
     justify-content: space-between;
 }
+
