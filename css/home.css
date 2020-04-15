@@ -3,87 +3,190 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 body {
-    background-color:black;
+    width: 100%;
+    background-color:rgb(40, 40, 40);
     margin: 0px;    
 }
 header {
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 100%;
     align-items: center;
 }
-.logo img {
-    border-radius: 50%;
-    width: 35vw;
+header .logo {
+    width: 100%;
+}
+header .logo .logo-header {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 30px auto;
 }
-.links ul {
+header .links {
+    margin-bottom: 20px;
+}
+header .links ul {
+    width: 100%;
     display: flex;
     flex-direction: column;
     margin: 0;
     padding: 0;
+    list-style: none;
 }
-.links ul li {
-    margin: 10px;
+header .links ul li {
+    margin: 8px;
 }
-.links ul li a {
+header .links ul li a {
+    width: 100%;
     text-decoration: none;
+    text-transform: uppercase;
     list-style: none;
     color: white;
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .buscador {
     border: 2px solid white;
+    margin-bottom: 10px;
+}
+.buscador button{
     color: white;
 }
-.rankings .tracks {
-    border: 2px solid white;
-    color: white;
+.rankings {
     width: 100%;
-    height: 30vh;
-}
-.rankings .albums {
-    border: 2px solid white;
-    color: white;
-    width: 100%;
-    height: 30vh;
-}
-.rankings .artists {
-    border: 2px solid white;
-    color: white;
-    width: 100%;
-    height: 30vh;
-}
-footer .logo img {
     display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
     align-items: center;
 }
-.nombres {
+.rankings .tracks {
+    width: 100%;
+    height: 50vh;
+    border: 2px solid white;
+    margin-bottom: 10px;
+}
+.rankings .tracks p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    color: white;
+}
+.rankings .albums {
+    width: 100%;
+    height: 50vh;
+    border: 2px solid white;
+    margin-bottom: 10px;
+}
+.rankings .albums p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    color: white;
+}
+.rankings .artists {
+    width: 100%;
+    height: 50vh;
+    border: 2px solid white;
+    margin-bottom: 10px;
+}
+.rankings .artists p{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-transform: uppercase;
+    color: white;
+}
+footer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+footer .logo{
+    width: 100%;
+}
+footer .logo .logo-footer {
+    width: 18%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px auto;
+}
+footer .nombres {
     margin: 0;
     padding: 0;
 }
-.nombres li  {
+footer .nombres li  {
     margin: 5px;
     text-decoration: none;
     list-style: none;
     color: white;
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 15px;
 } 
-@media only screen and (min-width:768px) {
-    .header {
+footer .deezer .logo-deezer{
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px auto;
+}
+@media only screen and (min-width:321px) {
+    header {
         flex-direction: row;
+        justify-content: space-between;
     }
-    .links ul {
-        display: flex;
-        flex-direction: row;
+    header .logo {
+        width: 15%;
+        margin: 30px 0;
+    }
+    header .logo .logo-header {
+        margin: 0 50px;
+    }
+    header .links{
+        margin: unset;
+    }
+    header .links ul {
+        flex-direction: unset;
         margin: 0;
         padding: 0;  
     }
+    header .links ul li{
+        padding: 3px 40px;
+        border-right: 3px solid white;
+    }
+    header .links ul li:last-child{
+        border-right: none;
+    }
+    header .links ul li a {
+        font-size: 20px;
+    }
+    footer{
+        flex-direction: row;
+    }
+    footer .nombres li{
+        display: unset;
+        font-size: 20px;
+        padding: 3px 20px;
+        border-right: 3px solid white;
+    }
+    footer .nombres li:last-child{
+        border-right: none;
+    }
+    footer .logo{
+        width: 15%;
+        margin: 40px 0;
+    }
+    footer .deezer{
+        width: 20%;
+    }
+
 }
