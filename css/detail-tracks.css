@@ -1,10 +1,13 @@
 * {
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Quicksand', sans-serif;
 }
 body {
     width: 100%;
-    background-color:rgb(40, 40, 40);
+    background-image: url(../img/fondo.png);
+    background-size: 320px;
+    background-repeat: no-repeat;
     margin: 0px;    
 }
 header {
@@ -18,13 +21,16 @@ header .logo {
     width: 100%;
 }
 header .logo .logo-header {
-    width: 25%;
+    width: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 30px auto;
+    margin: 20px auto;
 }
-header .links {
+header .links{
+    display: none;
+}
+/* header .links {
     margin-bottom: 20px;
 }
 header .links ul {
@@ -47,7 +53,7 @@ header .links ul li a {
     display: flex;
     align-items: center;
     justify-content: center;
-}
+} */
 .contenido{
     width: 100%;
     display: flex;
@@ -62,6 +68,7 @@ header .links ul li a {
 }
 .contenido .artista-img img{
     width: 60%;
+    border-radius: 10%;
 }
 .contenido .info{
     width: 100%;
@@ -72,32 +79,55 @@ header .links ul li a {
     list-style: none;
 }
 .contenido .info li{
-    margin: 3px;
+    margin-bottom: 5px;
     color: white;
     text-transform: capitalize;
 }
+.info .add{
+    display: flex;
+
+}
 .contenido .canciones{
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    margin: 0;
+    border: rgb(69, 69, 69) solid 2px;
+    border-radius: 10px;
+    margin: 0 10px;
     padding: 0;
     list-style: none;
 }
 .contenido .canciones li{
     color: white;
-    border: white solid 2px;
-    margin: 0 10px 4px 10px;
+    margin: 0 10px 2px 10px;
     padding: 3px;
 }
-footer{
+.mobile{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+.iconos{
+    margin: 0;
+    padding: 20px 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+.iconos li i{
+    font-size: 20px;
+    color: white;
+}
+.desktop{
+    display: none;
+}
+/* footer{
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-footer .logo{
+} */
+/* footer .logo{
     width: 100%;
 }
 footer .logo .logo-footer {
@@ -127,7 +157,7 @@ footer .deezer .logo-deezer{
     align-items: center;
     justify-content: center;
     margin: 30px auto;
-}
+} */
 
 @media only screen and (min-width:321px) {
     header {
