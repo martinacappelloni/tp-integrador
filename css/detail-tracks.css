@@ -30,30 +30,6 @@ header .logo .logo-header {
 header .links{
     display: none;
 }
-/* header .links {
-    margin-bottom: 20px;
-}
-header .links ul {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-header .links ul li {
-    margin: 8px;
-}
-header .links ul li a {
-    width: 100%;
-    text-decoration: none;
-    text-transform: uppercase;
-    list-style: none;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-} */
 .contenido{
     width: 100%;
     display: flex;
@@ -72,20 +48,39 @@ header .links ul li a {
 }
 .contenido .info{
     width: 100%;
+}
+.contenido .info .list{
+    width: 100%;
     display: flex;
     flex-direction: column;
     margin: 20px 10px;
     padding: 0;
     list-style: none;
 }
-.contenido .info li{
+.contenido .info .list li{
     margin-bottom: 5px;
     color: white;
     text-transform: capitalize;
 }
-.info .add{
+.contenido .info .list .title{
+    font-weight: 900;
+    font-size: 20px;
+}
+.contenido .info .list .subtitle{
+    font-size: 16px;
+}
+.contenido .info .list .date{
+    font-size: 12px;
+}
+.contenido .info .list .add{
     display: flex;
-
+    margin-top: 10px;
+}
+.contenido .info .list .add .heart{
+    margin-right: 20px;
+}
+.contenido .info .list .add .plus{
+    margin-right: 20px;
 }
 .contenido .canciones{
     width: 100%;
@@ -97,8 +92,14 @@ header .links ul li a {
 }
 .contenido .canciones li{
     color: white;
-    margin: 0 10px 2px 10px;
-    padding: 3px;
+    margin: 4px 0 4px 10px;
+}
+.contenido .canciones .song{
+    font-size: 18px;
+}
+.contenido .canciones .artist{
+    font-size: 10px;
+    color: rgb(220, 220, 220);
 }
 .mobile{
     width: 100%;
@@ -120,47 +121,15 @@ header .links ul li a {
 .desktop{
     display: none;
 }
-/* footer{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-} */
-/* footer .logo{
-    width: 100%;
-}
-footer .logo .logo-footer {
-    width: 18%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 30px auto;
-}
-footer .nombres {
-    margin: 0;
-    padding: 0;
-}
-footer .nombres li  {
-    margin: 5px;
-    text-decoration: none;
-    list-style: none;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 15px;
-} 
-footer .deezer .logo-deezer{
-    width: 15%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 30px auto;
-} */
 
 @media only screen and (min-width:321px) {
+    body{
+        background-image: url(../img/fondo-desk.png);
+        background-size: 2560px;
+    }
     header {
+        position: fixed;
+        top: 0;
         flex-direction: row;
         justify-content: space-between;
     }
@@ -169,44 +138,115 @@ footer .deezer .logo-deezer{
         margin: 30px 0;
     }
     header .logo .logo-header {
+        width: 25%;
         margin: 0 50px;
     }
     header .links{
-        margin: unset;
+        display: unset;
     }
     header .links ul {
-        flex-direction: unset;
+        width: 100%;
+        display: flex;
         margin: 0;
         padding: 0;  
+        list-style: none;
     }
     header .links ul li{
+        margin: 8px;
         padding: 3px 40px;
-        border-right: 3px solid white;
+        border-right: 2px solid white;
     }
     header .links ul li:last-child{
         border-right: none;
     }
     header .links ul li a {
+        width: 100%;
+        font-size: 20px;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .contenido{
+        margin-top: 300px;
+        display: grid;
+        grid-template-columns: 20% 70%;
+    }
+    .contenido .artista-img img{
+        width: 80%;
+        margin-right: 20px;
+    }
+    .contenido .info .list .title{
+        font-size: 30px;
+    }
+    .contenido .info .list .subtitle{
+        font-size: 26px;
+    }
+    .contenido .info .list .date{
+        font-size: 22px;
+    }
+    .contenido .info .list .add{
         font-size: 20px;
     }
-    footer{
-        flex-direction: row;
+    .contenido .canciones .song{
+        font-size: 22px;
     }
-    footer .nombres li{
-        display: unset;
-        font-size: 20px;
-        padding: 3px 20px;
-        border-right: 3px solid white;
+    .contenido .canciones .artist{
+        font-size: 14px;
     }
-    footer .nombres li:last-child{
+    .mobile{
+        display: none;
+    }
+    .desktop{
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .desktop .nombres li:last-child{
         border-right: none;
     }
-    footer .logo{
+    .desktop .logo{
         width: 15%;
-        margin: 40px 0;
+        margin-top: 40px;
     }
+    .desktop .logo .logo-footer {
+        width: 15%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 30px auto;
+    }
+    .desktop .nombres {
+        display: flex;
+        margin: 20px 0 0 50px;
+        padding: 0;
+    }   
+    .desktop .nombres li  {
+        margin: 5px;
+        padding: 3px 20px;
+        border-right: 2px solid white;
+        text-decoration: none;
+        list-style: none;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 15px;
+    } 
     footer .deezer{
         width: 20%;
     }
-    
+    footer .deezer .logo-deezer{
+        width: 15%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 40px auto 0;
+    }
 }
