@@ -27,6 +27,9 @@ header .logo .logo-header {
     align-items: center;
     margin: 20px auto;
 }
+header .logo .gif-logo{
+    display: none;
+}
 header .links{
     display: none;
 }
@@ -44,7 +47,11 @@ header .links{
 }
 .contenido .artista-img img{
     width: 60%;
-    border-radius: 10%;
+    border-radius: 20px;
+    border-radius: 20px;
+    background: #454546;
+    box-shadow:  10px 10px 20px #29292a, 
+                -10px -10px 20px #616162;
 }
 .contenido .info{
     width: 100%;
@@ -84,15 +91,16 @@ header .links{
 }
 .contenido .canciones{
     width: 100%;
-    border: rgb(69, 69, 69) solid 2px;
     border-radius: 10px;
     margin: 0 10px;
-    padding: 0;
+    padding: 10px;
     list-style: none;
+    background: #312c2e;
+    box-shadow:  10px 10px 25px #221f20, 
+                -10px -10px 25px #40393c;
 }
 .contenido .canciones li{
     color: white;
-    margin: 4px 0 4px 10px;
 }
 .contenido .canciones .song{
     font-size: 18px;
@@ -177,6 +185,10 @@ header .links{
     .contenido .artista-img img{
         width: 80%;
         margin-right: 20px;
+        border-radius: 40px;
+        background: #424143;
+        box-shadow:  20px 20px 30px #242324, 
+                    -20px -20px 30px #605f62;
     }
     .contenido .info .list .title{
         font-size: 30px;
@@ -189,6 +201,11 @@ header .links{
     }
     .contenido .info .list .add{
         font-size: 20px;
+    }
+    .contenido .canciones{
+        background: linear-gradient(145deg, #393739, #434143);
+        box-shadow:  15px 15px 30px #373637, 
+             -15px -15px 30px #474447;
     }
     .contenido .canciones .song{
         font-size: 22px;
