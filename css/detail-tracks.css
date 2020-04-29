@@ -1,6 +1,5 @@
 * {
     box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-family: 'Quicksand', sans-serif;
 }
 body {
@@ -40,14 +39,13 @@ header .links{
     justify-content: center;
     align-content: center;
 }
-.contenido .artista-img{
+.contenido .track-img{
     width: 100%;
     display: flex;
     justify-content: center;
 }
-.contenido .artista-img img{
+.contenido .track-img img{
     width: 60%;
-    border-radius: 20px;
     border-radius: 20px;
     background: #454546;
     box-shadow:  10px 10px 20px #29292a, 
@@ -55,7 +53,7 @@ header .links{
 }
 .contenido .info{
     width: 100%;
-    padding: 15px;
+    padding: 0 15px;
 }
 .contenido .info .list{
     width: 100%;
@@ -92,6 +90,10 @@ header .links{
 }
 .contenido .canciones{
     width: 100%;
+    padding: 0 15px;
+}
+.contenido .canciones .cancion{
+    width: 100%;
     border-radius: 10px;
     margin: 0;
     padding: 10px;
@@ -100,13 +102,13 @@ header .links{
     box-shadow:  10px 10px 25px #221f20, 
                 -10px -10px 25px #40393c;
 }
-.contenido .canciones li{
+.contenido .canciones .cancion li{
     color: white;
 }
-.contenido .canciones .song{
+.contenido .canciones .cancion .song{
     font-size: 18px;
 }
-.contenido .canciones .artist{
+.contenido .canciones .cancion .artist{
     font-size: 10px;
     color: rgb(220, 220, 220);
 }
@@ -183,7 +185,7 @@ header .links{
         display: grid;
         grid-template-columns: 20% 70%;
     }
-    .contenido .artista-img img{
+    .contenido .track-img img{
         width: 80%;
         margin-right: 20px;
         border-radius: 40px;
@@ -203,15 +205,15 @@ header .links{
     .contenido .info .list .add{
         font-size: 20px;
     }
-    .contenido .canciones{
+    .contenido .canciones .cancion{
         background: linear-gradient(145deg, #393739, #434143);
         box-shadow:  15px 15px 30px #373637, 
              -15px -15px 30px #474447;
     }
-    .contenido .canciones .song{
+    .contenido .canciones .cancion .song{
         font-size: 22px;
     }
-    .contenido .canciones .artist{
+    .contenido .canciones .cancion .artist{
         font-size: 14px;
     }
     .mobile{
