@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Assistant', sans-serif;
 }
 body {
     width: 100%;
@@ -117,6 +117,7 @@ header .links{
     position: fixed;
     bottom: 0;
     left: 0;
+    background-color: #262223;
 }
 .iconos{
     margin: 0;

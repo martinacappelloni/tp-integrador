@@ -1,11 +1,13 @@
 * {
     box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Assistant', sans-serif;
 }
 body {
     width: 100%;
-    background-color:rgb(40, 40, 40);
-    margin: 0px;    
+    background-image: url(../img/fondo.png);
+    background-size: 320px;
+    background-repeat: no-repeat;
+    margin: 0px; 
 }
 header {
     width: 100%;
@@ -18,35 +20,17 @@ header .logo {
     width: 100%;
 }
 header .logo .logo-header {
-    width: 25%;
+    width: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 30px auto;
+    margin: 20px auto;
+}
+header .logo .gif-logo{
+    display: none;
 }
 header .links {
-    margin-bottom: 20px;
-}
-header .links ul {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-header .links ul li {
-    margin: 8px;
-}
-header .links ul li a {
-    width: 100%;
-    text-decoration: none;
-    text-transform: uppercase;
-    list-style: none;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: none;
 }
 .contenido{
     width: 100%;
@@ -55,82 +39,112 @@ header .links ul li a {
     justify-content: center;
     align-content: center;
 }
-.contenido .artista-img{
+.contenido .album-img{
     width: 100%;
     display: flex;
     justify-content: center;
 }
-.contenido .artista-img img{
+.contenido .album-img img{
     width: 60%;
+    border-radius: 20px;
+    background: #454546;
+    box-shadow:  10px 10px 20px #29292a, 
+                -10px -10px 20px #616162;
 }
 .contenido .info{
     width: 100%;
+    padding: 0 15px;
+}
+.contenido .info .list{
+    width: 100%;
     display: flex;
     flex-direction: column;
-    margin: 20px 10px;
+    margin: 20px 0;
     padding: 0;
     list-style: none;
 }
-.contenido .info li{
-    margin: 3px;
+.contenido .info .list li{
+    margin: 5px;
     color: white;
     text-transform: capitalize;
 }
+.contenido .info .list .title{
+    font-weight: 900;
+    font-size: 20px;
+}
+.contenido .info .list .artista{
+    font-size: 16px;
+}
+.contenido .info .list .genre{
+    font-size: 12px;
+}
+.contenido .info .list .date{
+    font-size: 12px;
+}
+.contenido .info .list .add{
+    display: flex;
+    margin-top: 10px;
+}
+.contenido .info .list .add .heart{
+    margin-right: 20px;
+}
+.contenido .info .list .add .plus{
+    margin-right: 20px;
+}
 .contenido .canciones{
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+    padding: 0 15px;
 }
-.contenido .canciones li{
-    color: white;
-    border: white solid 2px;
-    margin: 0 10px 4px 10px;
-    padding: 3px;
-}
-footer{
+.contenido .canciones .cancion{
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-footer .logo{
-    width: 100%;
-}
-footer .logo .logo-footer {
-    width: 18%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 30px auto;
-}
-footer .nombres {
-    margin: 0;
-    padding: 0;
-}
-footer .nombres li  {
-    margin: 5px;
-    text-decoration: none;
+    border-radius: 10px;
+    margin: 8px 0;
+    padding: 10px;
     list-style: none;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 15px;
-} 
-footer .deezer .logo-deezer{
-    width: 15%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 30px auto;
+    background: #312c2e;
+    box-shadow:  10px 10px 25px #221f20, 
+                -10px -10px 25px #40393c;
 }
-
+.contenido .canciones .cancion li{
+    color: white;
+    text-transform: capitalize;
+}
+.contenido .canciones .cancion .song{
+    font-size: 18px;
+}
+.contenido .canciones .cancion .artist{
+    font-size: 10px;
+    color: rgb(220, 220, 220);
+}
+.mobile{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #2e292b;
+}
+.iconos{
+    margin: 0;
+    padding: 20px 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+.iconos li i{
+    font-size: 20px;
+    color: white;
+}
+.desktop{
+    display: none;
+}
 @media only screen and (min-width:321px) {
+    body{
+        background-image: url(../img/fondo-desk.png);
+        background-size: 2560px;
+    }
     header {
+        /* position: fixed;
+        top: 0; */
         flex-direction: row;
         justify-content: space-between;
     }
@@ -139,44 +153,136 @@ footer .deezer .logo-deezer{
         margin: 30px 0;
     }
     header .logo .logo-header {
+        width: 25%;
         margin: 0 50px;
     }
     header .links{
-        margin: unset;
+        display: unset;
     }
     header .links ul {
-        flex-direction: unset;
+        width: 100%;
+        display: flex;
         margin: 0;
         padding: 0;  
+        list-style: none;  
     }
     header .links ul li{
+        margin: 8px;
         padding: 3px 40px;
-        border-right: 3px solid white;
+        border-right: 2px solid white;
     }
     header .links ul li:last-child{
         border-right: none;
     }
     header .links ul li a {
+        width: 100%;
         font-size: 20px;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
-    footer{
-        flex-direction: row;
+    .contenido{
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: 20% 70%;
     }
-    footer .nombres li{
-        display: unset;
+    .contenido .album-img img{
+        width: 80%;
+        margin-right: 20px;
+        border-radius: 40px;
+        background: #424143;
+        box-shadow:  20px 20px 30px #242324, 
+                    -20px -20px 30px #605f62;
+    }
+    .contenido .info{
+        padding: 0 25px;
+    }
+    .contenido .info .list .title{
+        font-size: 30px;
+    }
+    .contenido .info .list .artista{
+        font-size: 24px;
+    }
+    .contenido .info .list .genre{
+        font-size: 18px;
+    }
+    .contenido .info .list .date{
+        font-size: 18px;
+    }
+    .contenido .info .list .add{
         font-size: 20px;
-        padding: 3px 20px;
-        border-right: 3px solid white;
+        margin-top: 5px;
     }
-    footer .nombres li:last-child{
+    .contenido .canciones{
+        grid-row-start: 1;
+        grid-column-start: 2;
+    }
+    .contenido .canciones .cancion{
+        background: linear-gradient(145deg, #3b3b3c, #474648);
+        box-shadow:  6px 6px 20px #383739, 
+             -6px -6px 20px #4c4b4d;
+        margin-bottom: 15px;
+    }
+    .contenido .canciones .cancion .song{
+        font-size: 22px;
+    }
+    .contenido .canciones .cancion .artist{
+        font-size: 14px;
+    }
+    .mobile{
+        display: none;
+    }
+    .desktop{
+        width: 100%;
+        /* position: absolute;
+        bottom: 0;
+        left: 0; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .desktop .nombres li:last-child{
         border-right: none;
     }
-    footer .logo{
+    .desktop .logo{
         width: 15%;
-        margin: 40px 0;
+        margin-top: 40px;
     }
+    .desktop .logo .logo-footer {
+        width: 15%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 30px auto;
+    }
+    .desktop .nombres {
+        display: flex;
+        margin: 20px 0 0 50px;
+        padding: 0;
+    }   
+    .desktop .nombres li  {
+        margin: 5px;
+        padding: 3px 20px;
+        border-right: 2px solid white;
+        text-decoration: none;
+        list-style: none;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 15px;
+    } 
     footer .deezer{
         width: 20%;
     }
-    
+    footer .deezer .logo-deezer{
+        width: 15%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 40px auto 0;
+    }
 }
