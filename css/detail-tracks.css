@@ -104,6 +104,7 @@ header .links{
 }
 .contenido .canciones .cancion li{
     color: white;
+    text-transform: capitalize;
 }
 .contenido .canciones .cancion .song{
     font-size: 18px;
