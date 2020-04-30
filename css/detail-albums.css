@@ -238,9 +238,9 @@ header .links {
     }
     .desktop{
         width: 100%;
-        position: absolute;
+        /* position: absolute;
         bottom: 0;
-        left: 0;
+        left: 0; */
         display: flex;
         justify-content: center;
         align-items: center;
@@ -276,7 +276,7 @@ header .links {
         width: 15%;
     }
     footer .deezer .logo-deezer{
-        width: 15%;
+        width: 18%;
         float: right;
     }
 }
