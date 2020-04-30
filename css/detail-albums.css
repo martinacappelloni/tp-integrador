@@ -244,24 +244,20 @@ header .links {
         display: flex;
         justify-content: center;
         align-items: center;
+        margin: 40px 0 15px 0;
     }
     .desktop .nombres li:last-child{
         border-right: none;
     }
     .desktop .logo{
         width: 15%;
-        margin-top: 40px;
     }
-    .desktop .logo .logo-footer {
+    .desktop .logo .logo-footer{
         width: 15%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 30px auto;
     }
     .desktop .nombres {
         display: flex;
-        margin: 20px 0 0 50px;
+        margin: 0;
         padding: 0;
     }   
     .desktop .nombres li  {
@@ -277,13 +273,10 @@ header .links {
         font-size: 15px;
     } 
     footer .deezer{
-        width: 20%;
+        width: 15%;
     }
     footer .deezer .logo-deezer{
         width: 15%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 40px auto 0;
+        float: right;
     }
 }
