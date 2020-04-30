@@ -33,17 +33,12 @@ header .links {
     display: none;
 }
 .buscador {
-    border: 2px solid white;
+    /* border: 2px solid white; */
     margin-bottom: 10px;
 }
 .buscador button{
     color: white;
 }
-<<<<<<< HEAD
-
-
-/* .rankings {
-=======
 form {
     display: block;
     margin: 20px;
@@ -60,9 +55,21 @@ button {
     border-radius: 10%;
     border:none;
 }
+.rankings .tracks .lista-tracks{
+    display: flex;
 
-.rankings {
->>>>>>> 2a2f67015f077925569465a7658c33361c890361
+}
+.rankings .tracks .lista-tracks .track{
+    width: 15%;
+    border: white solid 2px;
+    list-style: none;
+    text-transform: capitalize;
+    color: white;
+}
+.rankings .tracks .lista-tracks .track .track-img{
+    width: 100%;
+}
+/* .rankings {
     width: 100%;
     display: flex;
     flex-flow: column wrap;
