@@ -39,9 +39,30 @@ header .links {
 .buscador button{
     color: white;
 }
+<<<<<<< HEAD
 
 
 /* .rankings {
+=======
+form {
+    display: block;
+    margin: 20px;
+    padding: 0px;
+}
+input {
+    background-color: rgba(0, 0, 0, 0.473);
+    padding: 16px;
+    border: 2px solid greenyellow;  
+}
+button {
+    background-color: rgba(0, 0, 0, 0.459);
+    padding: 16px;
+    border-radius: 10%;
+    border:none;
+}
+
+.rankings {
+>>>>>>> 2a2f67015f077925569465a7658c33361c890361
     width: 100%;
     display: flex;
     flex-flow: column wrap;
