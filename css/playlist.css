@@ -24,28 +24,63 @@ header .logo .logo-header {
     align-items: center;
     margin: 30px auto;
 }
-
-
-
-
-
-
-footer{
-    flex-direction: row;
+header .links {
+    margin-bottom: 20px;
 }
-footer .nombres li{
-    display: unset;
-    font-size: 20px;
-    padding: 3px 20px;
-    border-right: 3px solid white;
+header .links ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
-footer .nombres li:last-child{
-    border-right: none;
+header .links ul li {
+    margin: 8px;
 }
+header .links ul li a {
+    width: 100%;
+    text-decoration: none;
+    text-transform: uppercase;
+    list-style: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
 footer .logo{
-    width: 15%;
-    margin: 40px 0;
+    width: 100%;
 }
-footer .deezer{
-    width: 20%;
+footer .logo .logo-footer {
+    width: 18%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px auto;
+}
+footer .nombres {
+    margin: 0;
+    padding: 0;
+}
+footer .nombres li  {
+    margin: 5px;
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+} 
+footer .deezer .logo-deezer{
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px auto;
 }
