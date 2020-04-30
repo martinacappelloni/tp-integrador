@@ -55,6 +55,23 @@ header .links ul li a {
 .buscador button{
     color: white;
 }
+form {
+    display: block;
+    margin: 20px;
+    padding: 0px;
+}
+input {
+    background-color: rgba(0, 0, 0, 0.473);
+    padding: 16px;
+    border: 2px solid greenyellow;  
+}
+button {
+    background-color: rgba(0, 0, 0, 0.459);
+    padding: 16px;
+    border-radius: 10%;
+    border:none;
+}
+
 .rankings {
     width: 100%;
     display: flex;
