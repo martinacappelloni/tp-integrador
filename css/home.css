@@ -7,7 +7,7 @@ body {
     background-image: url(../img/fondo.png);
     background-size: cover;
     background-repeat: no-repeat;
-    margin: 0px; 
+    margin: 0px;
 }
 header {
     width: 100%;
@@ -47,7 +47,7 @@ form {
 input {
     background-color: rgba(0, 0, 0, 0.473);
     padding: 16px;
-    border: 2px solid greenyellow;  
+    border: 2px solid greenyellow;
 }
 button {
     background-color: rgba(0, 0, 0, 0.459);
@@ -163,8 +163,8 @@ button {
         width: 100%;
         display: flex;
         margin: 0;
-        padding: 0;  
-        list-style: none;  
+        padding: 0;
+        list-style: none;
     }
     header .links ul li{
         margin: 8px;
@@ -210,7 +210,7 @@ button {
         display: flex;
         margin: 0;
         padding: 0;
-    }   
+    }
     .desktop .nombres li  {
         margin: 5px;
         padding: 3px 20px;
@@ -222,7 +222,7 @@ button {
         align-items: center;
         justify-content: center;
         font-size: 15px;
-    } 
+    }
     footer .deezer{
         width: 15%;
     }
@@ -230,5 +230,4 @@ button {
         width: 18%;
         float: right;
     }
-    
 }
