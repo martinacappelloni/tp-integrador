@@ -101,9 +101,9 @@ header .links {
     margin: 8px 0;
     padding: 10px;
     list-style: none;
-    background: #312c2e;
-    box-shadow:  10px 10px 25px #221f20, 
-                -10px -10px 25px #40393c;
+    background: linear-gradient(145deg, #333232, #3d3b3c);
+    box-shadow:  6px 6px 20px #302f30, 
+             -6px -6px 20px #423f40;
 }
 .contenido .canciones .cancion li{
     color: white;
@@ -121,7 +121,8 @@ header .links {
     position: fixed;
     bottom: 0;
     left: 0;
-    background-color: #2e292b;
+    background-color: #383336b1;
+    backdrop-filter: blur(5px);
 }
 .iconos{
     margin: 0;

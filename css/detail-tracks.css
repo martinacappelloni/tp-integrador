@@ -119,7 +119,9 @@ header .links{
     position: fixed;
     bottom: 0;
     left: 0;
-    background-color: #262223;
+    background-color: #262223ba;
+    backdrop-filter: blur(5px);
+
 }
 .iconos{
     margin: 0;
