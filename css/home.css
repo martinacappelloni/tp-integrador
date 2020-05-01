@@ -32,9 +32,6 @@ header .logo .gif-logo{
 header .links{
     display: none;
 }
-.buscador{
-    margin-bottom: 10px;
-}
 .buscador form{
     display: block;
     margin: 20px;
@@ -129,81 +126,102 @@ header .links{
   }
  */
 
- .rankings .tracks {
+.rankings{
+    padding: 0 50px;
+}
+.rankings .titulo{
+    color: white;
+    text-transform: capitalize;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.rankings .tracks{
     width: 100%;
-    margin: auto;
+    margin: 40px 0;
     /* overflow: hidden; */
 }
 .rankings .tracks .lista-tracks{
     width: 100%;
     display: flex;
-    padding: 0px;    
+    justify-content: center;
+    padding: 0;
+    margin: 0;    
     /* animation:cambio 10s infinite alternate linear; */
 }
 .rankings .tracks .lista-tracks .track{
-    width: 15%;
-    border: white solid 2px;
+    width: 20%;
+    margin: 0 10px;
     list-style: none;
     text-transform: capitalize;
     color: white;
 }
 .rankings .tracks .lista-tracks .track .track-img{
     width: 100%;
+    border-radius: 20px;
 }
-.rankings .tracks .lista-tracks .track .title {
-    font-size: 10px;
+.rankings .tracks .lista-tracks .track .title{
+    font-size: 20px;
+    margin: 10px 0 5px;
 }
-.rankings .tracks .lista-tracks .track .artist {
-    font-size: 10px;
+.rankings .tracks .lista-tracks .track .artist{
+    font-size: 14px;
+    margin: 0;
 }
-.rankings .albums {
+.rankings .albums{
     width: 100%;
-    margin: auto;
-    overflow: hidden;
+    margin: 40px 0;
 }
 .rankings .albums .lista-albums{
     width: 100%;
     display: flex;
-    padding: 0px;
+    justify-content: center;
+    padding: 0;
+    margin: 0;    
 }
 .rankings .albums .lista-albums .album{
-    width: 15%;
-    border: white solid 2px;
+    width: 20%;
+    margin: 0 10px;
     list-style: none;
     text-transform: capitalize;
     color: white;
 }
 .rankings .albums .lista-albums .album .album-img{
     width: 100%;
+    border-radius: 20px;
 }
-.rankings .albums .lista-albums .album .title {
-    font-size: 10px;
+.rankings .albums .lista-albums .album .title{
+    font-size: 20px;
+    margin: 10px 0 5px;
 }
-.rankings .albums .lista-albums .album .artist {
-    font-size: 10px;
+.rankings .albums .lista-albums .album .artist{
+    font-size: 14px;
+    margin: 0;
 }
-.rankings .artists {
+.rankings .artists{
     width: 100%;
-    margin: auto;
-    overflow: hidden;
+    margin: 40px 0;
 }
 .rankings .artists .lista-artists{
     width: 100%;
     display: flex;
-    padding: 0px;
+    justify-content: center;
+    padding: 0;
+    margin: 0;    
 }
 .rankings .artists .lista-artists .artist{
-    width: 15%;
-    border: white solid 2px;
+    width: 20%;
+    margin: 0 10px;
     list-style: none;
     text-transform: capitalize;
     color: white;
 }
 .rankings .artists .lista-artists .artist .artist-img{
     width: 100%;
+    border-radius: 20px;
 }
 .rankings .artists .lista-artists .artist .name {
-    font-size: 10px;
+    font-size: 20px;
+    margin: 10px 0 5px;
 }
 .mobile{
     width: 100%;
@@ -230,7 +248,7 @@ header .links{
 @media only screen and (min-width:321px) {
     body{
         background-image: url(../img/fondo-desk.png);
-        background-size: 2560px;
+        background-size: cover;
     }
     header {
         /* position: fixed;

@@ -141,7 +141,7 @@ header .links {
 @media only screen and (min-width:321px) {
     body{
         background-image: url(../img/fondo-desk.png);
-        background-size: 2560px;
+        background-size: cover;
     }
     header {
         /* position: fixed;
