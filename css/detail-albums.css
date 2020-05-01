@@ -38,6 +38,7 @@ header .links {
     flex-flow: row wrap;
     justify-content: center;
     align-content: center;
+    margin-bottom: 70px;
 }
 .contenido .album-img{
     width: 100%;
@@ -121,8 +122,8 @@ header .links {
     position: fixed;
     bottom: 0;
     left: 0;
-    background-color: #383336b1;
-    backdrop-filter: blur(5px);
+    /* background-color: #383336b1; */
+    backdrop-filter: blur(6px);
 }
 .iconos{
     margin: 0;
