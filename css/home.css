@@ -55,11 +55,21 @@ button {
     border-radius: 10%;
     border:none;
 }
+.rankings .tracks {
+    width: 95%;
+    margin: auto;
+    overflow: hidden;
+}
 .rankings .tracks .lista-tracks{
+    width: 100%;
     display: flex;
+    padding: 0px;
+    
+    animation:cambio 20s infinite alternate linear;
 
 }
 .rankings .tracks .lista-tracks .track{
+    width: 100%;
     width: 15%;
     border: white solid 2px;
     list-style: none;
@@ -69,6 +79,26 @@ button {
 .rankings .tracks .lista-tracks .track .track-img{
     width: 100%;
 }
+.rankings .tracks .lista-tracks .track .title {
+    font-size: 10px;
+}
+.rankings .tracks .lista-tracks .track .artist {
+    font-size: 10px;
+}
+@keyframes cambio {
+	0% {margin-left: 0;}
+	20% {margin-left: 0;}
+	
+	25% {margin-left: -100%;}
+	45% {margin-left: -100%;}
+	
+	50% {margin-left: -200%;}
+	70% {margin-left: -200%;}
+	
+	75% {margin-left: -300%;}
+	100% {margin-left: -300%;}
+}
+
 /* .rankings {
     width: 100%;
     display: flex;
