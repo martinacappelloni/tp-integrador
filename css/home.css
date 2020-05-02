@@ -41,7 +41,7 @@ header .links{
 }
 .rankings .titulo{
     color: white;
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-size: 25px;
     margin: 0 0 15px;
 }
@@ -317,7 +317,7 @@ header .links{
     }
     .rankings .titulo{
         color: white;
-        text-transform: uppercase;
+        text-transform: capitalize;
         font-size: 30px;
         margin-bottom: 20px;
     }
