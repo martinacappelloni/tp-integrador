@@ -83,6 +83,9 @@ header .links {
     display: flex;
     margin-top: 10px;
 }
+.contenido .info .list .add a{
+    color: white;
+}
 .contenido .info .list .add .heart{
     margin-right: 20px;
 }

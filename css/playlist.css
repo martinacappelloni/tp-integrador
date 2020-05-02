@@ -84,6 +84,9 @@ header .links{
     display: flex;
     margin-top: 10px;
 }
+.contenido .info .list .add a{
+    color: white;
+}
 .contenido .info .list .add .download{
     margin-right: 20px;
 }
