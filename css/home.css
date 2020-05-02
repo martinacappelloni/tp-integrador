@@ -177,14 +177,15 @@ header .links{
         background-size: cover;
     }
     header {
-        /* position: fixed;
-        top: 0; */
+        position: fixed;
+        top: 0;
         flex-direction: row;
         justify-content: space-between;
+        backdrop-filter: blur(10px);
     }
     header .logo {
         width: 15%;
-        margin: 30px 0;
+        margin: 30px 0 10px;
     }
     header .logo .logo-header {
         width: 25%;
@@ -218,21 +219,26 @@ header .links{
         align-items: center;
         justify-content: center;
     }
+    .buscador{
+        display: unset;
+    }
     .buscador form{
         display: block;
-        margin: 20px;
+        margin: 170px 50px 0;
         padding: 0px;
     }
     .buscador form input{
-        background-color: rgba(0, 0, 0, 0.473);
-        padding: 16px;
+        width: 20%;
+        background-color: #302c2e;
+        padding: 10px;
+        border-radius: 10px;
+        border:none;
     }
     .buscador form button{
         color: white;
-        text-transform: capitalize;
-        background-color: rgba(0, 0, 0, 0.459);
-        padding: 16px;
-        border-radius: 10%;
+        background-color: #302c2e;
+        padding: 10px;
+        border-radius: 10px;
         border:none;
     }
     
@@ -323,7 +329,7 @@ header .links{
     }
     .rankings .tracks{
         width: 100%;
-        margin: 40px 0;
+        margin: 30px 0 40px;
         /* overflow: hidden; */
     }
     .rankings .tracks .lista-tracks{

@@ -122,7 +122,6 @@ header .links {
     position: fixed;
     bottom: 0;
     left: 0;
-    /* background-color: #383336b1; */
     backdrop-filter: blur(6px);
 }
 .iconos{
@@ -145,10 +144,11 @@ header .links {
         background-size: cover;
     }
     header {
-        /* position: fixed;
-        top: 0; */
+        position: fixed;
+        top: 0;
         flex-direction: row;
         justify-content: space-between;
+        backdrop-filter: blur(10px);
     }
     header .logo {
         width: 15%;
@@ -187,7 +187,7 @@ header .links {
         justify-content: center;
     }
     .contenido{
-        margin-top: 50px;
+        margin-top: 200px;
         display: grid;
         grid-template-columns: 20% 70%;
     }
