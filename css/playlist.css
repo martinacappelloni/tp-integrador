@@ -270,6 +270,7 @@ header .links{
         padding: 3px 20px;
         border-right: 2px solid white;
         text-decoration: none;
+        text-transform: capitalize;
         list-style: none;
         color: white;
         display: flex;
