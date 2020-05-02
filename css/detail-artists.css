@@ -106,6 +106,9 @@ header .links {
     box-shadow:  6px 6px 20px #2b2728, 
              -6px -6px 20px #3a3536;
 }
+.contenido .canciones .cancion a{
+    text-decoration: none;
+}
 .contenido .canciones .cancion li{
     color: white;
     text-transform: capitalize;

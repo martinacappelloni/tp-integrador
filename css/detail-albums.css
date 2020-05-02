@@ -76,8 +76,16 @@ header .links {
 .contenido .info .list .artista{
     font-size: 16px;
 }
+.contenido .info .list .artista a{
+    color: white;
+    text-decoration: none;
+}
 .contenido .info .list .genre{
     font-size: 12px;
+}
+.contenido .info .list .genre a{
+    color: white;
+    text-decoration: none;
 }
 .contenido .info .list .date{
     font-size: 12px;
@@ -108,6 +116,9 @@ header .links {
     background: linear-gradient(145deg, #333232, #3d3b3c);
     box-shadow:  6px 6px 20px #302f30, 
              -6px -6px 20px #423f40;
+}
+.contenido .canciones .cancion a{
+    text-decoration: none;
 }
 .contenido .canciones .cancion li{
     color: white;
@@ -242,9 +253,6 @@ header .links {
     }
     .desktop{
         width: 100%;
-        /* position: absolute;
-        bottom: 0;
-        left: 0; */
         display: flex;
         justify-content: center;
         align-items: center;
