@@ -8,6 +8,14 @@
     <script src="js/script.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Assistant&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.4.6/dist/css/uikit.min.css">
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.4.6/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.4.6/dist/js/uikit-icons.min.js"></script>
+    
 </head>
 <body>
     <header>
@@ -29,10 +37,10 @@
             <button><i class="fas fa-search"></i></button>
         </form>
     </section>
-    <section class="rankings">
-        <div class="tracks">
+    <section class="rankings" uk-slider>
+        <div class="tracks uk-slider-container">
             <h1 class="titulo">tracks</h1>
-            <ul class="lista-tracks">
+            <ul class="lista-tracks uk-slider-items">
                 <li class="track">
                     <img class="track-img" src="img/changes.jpg" alt="intentions">
                     <h2 class="title">
@@ -87,11 +95,51 @@
                         <a href="detail-artists.html">khalid</a>
                     </h3>
                 </li>
+                <li class="track">
+                    <img class="track-img" src="img/khalid.jpg" alt="khalid">
+                    <h2 class="title">
+                        <a href="detail-tracks.html">american teen</a>
+                    </h2>
+                    <h3 class="artist">
+                        <a href="detail-artists.html">khalid</a>
+                    </h3>
+                </li>
+                <li class="track">
+                    <img class="track-img" src="img/khalid.jpg" alt="khalid">
+                    <h2 class="title">
+                        <a href="detail-tracks.html">american teen</a>
+                    </h2>
+                    <h3 class="artist">
+                        <a href="detail-artists.html">khalid</a>
+                    </h3>
+                </li>
+                <li class="track">
+                    <img class="track-img" src="img/khalid.jpg" alt="khalid">
+                    <h2 class="title">
+                        <a href="detail-tracks.html">american teen</a>
+                    </h2>
+                    <h3 class="artist">
+                        <a href="detail-artists.html">khalid</a>
+                    </h3>
+                </li>
+                <li class="track">
+                    <img class="track-img" src="img/khalid.jpg" alt="khalid">
+                    <h2 class="title">
+                        <a href="detail-tracks.html">american teen</a>
+                    </h2>
+                    <h3 class="artist">
+                        <a href="detail-artists.html">khalid</a>
+                    </h3>
+                </li>
             </ul>
+
+            <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+            <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+
         </div>
         <div class="albums">
             <h1 class="titulo">albums</h1>
-            <ul class="lista-albums">
+            <ul class="lista-albums ">
                 <li class="album">
                     <img class="album-img" src="img/lewis.png" alt="divinely-uninspired-to-a-hellish-extent">
                     <h2 class="title">
@@ -147,10 +195,12 @@
                     </h3>
                 </li>
             </ul>
+
+            
         </div>
-        <div class="artists">
+        <div class="artists ">
             <h1 class="titulo">artists</h1>
-            <ul class="lista-artists">
+            <ul class="lista-artists ">
                 <li class="artist">
                     <img class="artist-img" src="img/beatles.jpg" alt="the-beatles">
                     <h2 class="name">
@@ -188,6 +238,8 @@
                     </h2>
                 </li>
             </ul>
+
+           
         </div>
     </section>
     <footer class="mobile">

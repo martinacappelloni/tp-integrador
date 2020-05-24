@@ -2,6 +2,7 @@
     box-sizing: border-box;
     font-family: 'Assistant', sans-serif;
 }
+
 body {
     width: 100%;
     background-image: url(../img/fondo.png);
@@ -48,24 +49,23 @@ header .links{
 .rankings a{
     text-decoration: none;
     color: white;
+    text-transform: capitalize;
 }
 .rankings .tracks{
     width: 100%;
     margin: 0 0 30px;
-    /* overflow: hidden; */
 }
 .rankings .tracks .lista-tracks{
     width: 100%;
     display: flex;
-    flex-flow: row wrap;
+    /* flex-flow: row wrap; */
     justify-content: center;
     padding: 0;
     margin: 0;    
-    /* animation:cambio 10s infinite alternate linear; */
 }
 .rankings .tracks .lista-tracks .track{
-    width: 45%;
-    margin: 0 5px 15px;
+    width: 46%;
+    margin: 0 8px 15px;
     list-style: none;
     text-transform: capitalize;
     color: white;
@@ -92,14 +92,13 @@ header .links{
 .rankings .albums .lista-albums{
     width: 100%;
     display: flex;
-    flex-flow: row wrap;
     justify-content: center;
     padding: 0;
     margin: 0;    
 }
 .rankings .albums .lista-albums .album{
-    width: 45%;
-    margin: 0 5px 15px;
+    width: 46%;
+    margin: 0 8px 15px;
     list-style: none;
     text-transform: capitalize;
     color: white;
@@ -126,14 +125,13 @@ header .links{
 .rankings .artists .lista-artists{
     width: 100%;
     display: flex;
-    flex-flow: row wrap;
     justify-content: center;
     padding: 0;
     margin: 0;    
 }
 .rankings .artists .lista-artists .artist{
-    width: 45%;
-    margin: 0 5px 15px;
+    width: 46%;
+    margin: 0 8px 15px;
     list-style: none;
     text-transform: capitalize;
     color: white;
@@ -170,6 +168,10 @@ header .links{
 .desktop{
     display: none;
 }
+
+
+
+
 @media only screen and (min-width:321px) {
     body{
         background-image: url(../img/fondo-desk.png);
@@ -240,83 +242,6 @@ header .links{
         border-radius: 10px;
         border:none;
     }
-    
-    /* .rankings .tracks {
-        position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 190px;
-      height: 210px;
-      margin: 0;
-      -webkit-perspective: 800px;
-              perspective: 800px;
-      -webkit-transform: translate(-50%, -50%);
-          -ms-transform: translate(-50%, -50%);
-              transform: translate(-50%, -50%);
-    }
-    .rankings .tracks .lista-tracks {
-        position: absolute;
-      width: 100%;
-      height: 100%;
-      -webkit-transform-style: preserve-3d;
-              transform-style: preserve-3d;
-      -webkit-transform: translateZ(-182px) rotateY(0);
-              transform: translateZ(-182px) rotateY(0);
-      -webkit-animation: carrusel 10s infinite cubic-bezier(1, 0.015, 0.295, 1.225) forwards;
-              animation: carrusel 10s infinite cubic-bezier(1, 0.015, 0.295, 1.225) forwards;
-    }
-    .rankings .tracks .lista-tracks .track {
-        position: absolute;
-      top: 0;
-      left: 0;
-      width: 190px;
-      height: 210px;
-      border-radius: 6px;
-    } */
-    /* .track:nth-child(1) {
-        -webkit-transform: rotateY(0) translateZ(182px);
-                transform: rotateY(0) translateZ(182px);
-      }
-      .track:nth-child(2) {
-        -webkit-transform: rotateY(120deg) translateZ(182px);
-                transform: rotateY(120deg) translateZ(182px);
-      }
-      .track:nth-child(3) {
-        -webkit-transform: rotateY(240deg) translateZ(182px);
-                transform: rotateY(240deg) translateZ(182px);
-      }
-      .track:nth-child(4) {
-        -webkit-transform: rotateY(240deg) translateZ(182px);
-                transform: rotateY(240deg) translateZ(182px);
-      }
-      .track:nth-child(5) {
-        -webkit-transform: rotateY(240deg) translateZ(182px);
-                transform: rotateY(240deg) translateZ(182px);
-      }
-      .track:nth-child(6) {
-        -webkit-transform: rotateY(240deg) translateZ(182px);
-                transform: rotateY(240deg) translateZ(182px);
-      }
-      @keyframes carrusel {
-        0%,  17.5% {
-          -webkit-transform: translateZ(-182px) rotateY(0);
-                  transform: translateZ(-182px) rotateY(0);
-        }
-        27.5%, 45% {
-          -webkit-transform: translateZ(-182px) rotateY(-120deg);
-                  transform: translateZ(-182px) rotateY(-120deg);
-        }
-        55%, 72.5% {
-          -webkit-transform: translateZ(-182px) rotateY(-240deg);
-                  transform: translateZ(-182px) rotateY(-240deg);
-        }
-        82.5%, 100% {
-          -webkit-transform: translateZ(-182px) rotateY(-360deg);
-                  transform: translateZ(-182px) rotateY(-360deg);
-        }
-      }
-     */
-    
     .rankings{
         padding: 0 50px;
     }
@@ -331,7 +256,7 @@ header .links{
         flex-flow: unset;
     }
     .rankings .tracks .lista-tracks .track{
-        width: 20%;
+        width: 15.5%;
         margin: 0 10px;
     }
     .rankings .tracks .lista-tracks .track .title{
