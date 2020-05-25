@@ -1,9 +1,4 @@
-window.onload = function(){
 
-
-
-
-}
 ///1) llamar a la api de deezer para que traiga los charts
 //2) recorrer el resultado par amostrar algo de lo que me traiga en html
 //3) meter el contenido con el formato que ya tienen definido
@@ -15,17 +10,17 @@ window.onload = function(){
 
 window.onload= function(){
 
-    const apiRoute = 'https://cors-anywhere.herokuapp.com/https://api.deezer.com/'
+    const apiRoute = 'https://cors-anywhere.herokuapp.com/https://api.deezer.com/';
     
    
    
-    fetch('https://api.deezer.com/chart')
+    fetch ('https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart')
     .then(function (response) {
         return response.json();
     })
     .then(function (informacion) {
-   ​
-       console.log(informacion.tracks);
+   ​ 
+     console.log(informacion.tracks);
    ​
    ​    var ul = document.querySelector(".lista-tracks");
    
@@ -33,8 +28,12 @@ window.onload= function(){
         
        var contenido = "";
    ​
-        for (let i = 0; i < informacion.data.length; i++) {
-            var element = informacion.data[i];
+        for (let i = 0; i < informacion.tracks.data.length; i++) {
+            var element = informacion.tracks.data[i];
+            elementosAInsertarHTML += "<h3>"+ element.title + "</h3>";
+            elementosAInsertarHTML += "<h3>"+ element.albums.title + "</h3>";
+            elementosAInsertarHTML += "<h3>"+ element.artist.name + "</h3>";
+            
    ​
    ​
            ul.innerHTML +='<li class="track"><img class="track-img" src="img/newlight.jpg" alt="newlight"><h2 class="title">    <a href="detail-tracks.html">new light</a></h2><h3 class="artist">    <a href="detail-artists.html">john mayer</a></h3></li>';
@@ -58,7 +57,7 @@ window.onload= function(){
     })
    
    
-   // probando si me anda git
+   
    
    //NO BORRAR
    }
