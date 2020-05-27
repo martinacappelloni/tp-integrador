@@ -65,7 +65,7 @@ header .links{
     list-style: none;
 }
 .contenido .info .list li{
-    margin-bottom: 5px;
+    margin-bottom: 3px;
     color: white;
     text-transform: capitalize;
 }
@@ -77,6 +77,11 @@ header .links{
     text-decoration: none;
     color: white;
     font-size: 16px;
+}
+.contenido .info .list .sub-subtitle a{
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
 }
 .contenido .info .list .date{
     font-size: 12px;
@@ -202,14 +207,20 @@ header .links{
         box-shadow:  20px 20px 30px #242324, 
                     -20px -20px 30px #605f62;
     }
+    .contenido .info .list{
+        margin: 10px 0;
+    }
     .contenido .info .list .title{
         font-size: 30px;
     }
     .contenido .info .list .subtitle a{
         font-size: 26px;
     }
-    .contenido .info .list .date{
+    .contenido .info .list .sub-subtitle a{
         font-size: 22px;
+    }
+    .contenido .info .list .date{
+        font-size: 20px;
     }
     .contenido .info .list .add{
         font-size: 20px;

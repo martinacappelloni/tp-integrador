@@ -16,7 +16,7 @@ fetch(apiRoute + '/chart')
         contenido += '<li class="track">'
         contenido += '<img class="track-img" src="' + element.album.cover + '"alt="album-cover">'
         contenido += '<h2 class="title">'
-        contenido += '<a href="detail-tracks.html?id='+ element.id + '">' + element.title + '</a>'
+        contenido += '<a href="detail-tracks.html?id=' + element.id + '">' + element.title + '</a>'
         contenido += '</h2>'
         contenido += '<h3 class="artist">'
         contenido += '<a href="detail-artists.html?id=' + element.artist.id + '">' + element.artist.name + '</a>'
@@ -71,7 +71,7 @@ fetch(apiRoute + '/chart')
         contenido += '<li class="artist">'
         contenido += '<img class="artist-img" src="' + element.picture + '"alt="artist-picture">'
         contenido += '<h2 class="name">'
-        contenido += '<a href="detail-artists.html?id='+ element.id + '">' + element.name + '</a>'
+        contenido += '<a href="detail-artists.html?id=' + element.id + '">' + element.name + '</a>'
         contenido += '</h2>'
         contenido += '</li>'
     }

@@ -9,20 +9,20 @@ window.onload = function () {
     .then(function (response) {
         return response.json();
     })
-    .then(function (data) {
+    .then(function (info) {
 
-        console.log(data)
+        console.log(info)
         var contenedor = document.querySelector('.contenido')
         var contenido = ' '
     
         contenido += '<aside style="width: 100%;">'
         contenido += '<div class="artista-img">'
-        contenido += '<img src="img/beatles.jpg" alt="artista-img">'
+        contenido += '<img src="'+ info.picture +'" alt="artista-img">'
         contenido += '</div>'
         contenido += '<div class="info">'
         contenido += '<ul class="list">'
-        contenido += '<li class="title">the beatles</li>'
-        contenido += '<li class="followers">22,977,599</li>'
+        contenido += '<li class="title"> ' + info.name + '</li>'
+        contenido += '<li class="followers">' + info.nb_fan + ' followers</li>'
         contenido +='<section class="add">'
         contenido += '<li class="heart">'
         contenido += '<a href=""><i class="far fa-heart"></i></a>'
@@ -38,62 +38,29 @@ window.onload = function () {
         contenido += '</div>'
         contenido += '</aside>'
 
-        for (let i = 0; i < data.length; i++) {
-        var element = data [i];
-        contenido += '<div class="canciones">'
-        contenido += '<ul class="cancion">'
-        contenido += '<a href="detail-tracks.html">'
-        contenido += '<li class="song">here comes the sun</li>'
-        contenido += '<li class="artist">remastered 2009</li>'
-        contenido += '</a>'
-        contenido += '</ul>'
-        contenido += '</div>'
-        }
+        // for (let i = 0; i < info.data.length; i++) {
 
-    contenedor.innerHTML = contenido;
-    contenido += '<aside style="width: 100%;">'
-    contenido += '<div class="artista-img">'
-    contenido += '<img src="'+ data.picture +'" alt="artista-img">'
-    contenido += '</div>'
-    contenido += '<div class="info">'
-    contenido += '<ul class="list">'
-    contenido += '<li class="title"> ' + data.name + '</li>'
-    contenido += '<li class="followers">' + data.nb_fan + '</li>'
-    contenido +='<section class="add">'
-    contenido += '<li class="heart">'
-    contenido += '<a href=""><i class="far fa-heart"></i></a>'
-    contenido += '</li>'
-    contenido += '<li class="plus">'
-    contenido += '<a href="playlist.html"><i class="fas fa-plus"></i></a>'
-    contenido += '</li>'
-    contenido += '<li class="elipsis">'
-    contenido += '<a href=""><i class="fas fa-ellipsis-h"></i></a>'
-    contenido += '</li>'
-    contenido += '</section>'
-    contenido += '</ul>'
-    contenido += '</div>'
-    contenido += '</aside>'
+        // var element = info.data [i];
 
-//         for (let i = 0; i < data.length; i++) {
-//     var element = data [i];
-//     contenido += '<div class="canciones">'
-//     contenido += '<ul class="cancion">'
-//     contenido += '<a href="detail-tracks.html">'
-//     contenido += '<li class="song">' + element.tracklist + '</li>'
-//     contenido += '<li class="artist">remastered 2009</li>'
-//     contenido += '</a>'
-//     contenido += '</ul>'
-//     contenido += '</div>'
+        // contenido += '<div class="canciones">'
+        // contenido += '<ul class="cancion">'
+        // contenido += '<a href="detail-tracks.html">'
+        // contenido += '<li class="song">' + element.tracklist + '</li>'
+        // contenido += '<li class="artist">remastered 2009</li>'
+        // contenido += '</a>'
+        // contenido += '</ul>'
+        // contenido += '</div>'
 
-// }
-contenedor.innerHTML = contenido;
+        // }
+
+        contenedor.innerHTML = contenido;
 })
 
-    .catch(function (error) {
-        console.log("Hubo un error" + error);
-    })
+.catch(function (error) {
+    console.log("Hubo un error" + error);
+})
 
 
-
+//
 }
-
+//
