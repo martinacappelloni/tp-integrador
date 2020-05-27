@@ -57,11 +57,29 @@ fetch(apiRoute + '/chart')
     console.log("Hubo un error" + error);
 })
 
-
-
-     
-
-   
+fetch(apiRoute + '/chart')
+.then(function (response) {
+    return response.json();
+})
+.then(function (informacion) {
+    console.log(informacion.artists.data);
+    var contenedor = document.querySelector('.lista-artists');
+    console.log(contenedor);
+    var contenido = " ";
+    for (let i = 0; i < informacion.artists.data.length; i++) {
+        var element = informacion.artists.data[i];
+        contenido += '<li class="artist">'
+        contenido += '<img class="artist-img" src="' + element.picture + '"alt="artist-picture">'
+        contenido += '<h2 class="name">'
+        contenido += '<a href="detail-artists.html">' + element.name + '</a>'
+        contenido += '</h2>'
+        contenido += '</li>'
+    }
+    contenedor.innerHTML = contenido;
+})
+.catch(function (error) {
+    console.log("Hubo un error" + error);
+})
    
    //NO BORRAR
    }
