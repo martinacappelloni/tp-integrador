@@ -71,7 +71,7 @@ fetch(apiRoute + '/chart')
         contenido += '<li class="artist">'
         contenido += '<img class="artist-img" src="' + element.picture + '"alt="artist-picture">'
         contenido += '<h2 class="name">'
-        contenido += '<a href="detail-artists.html">' + element.name + '</a>'
+        contenido += '<a href="detail-artists.html?id='+ element.id + '">' + element.name + '</a>'
         contenido += '</h2>'
         contenido += '</li>'
     }
