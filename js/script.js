@@ -1,62 +1,47 @@
-
-///1) llamar a la api de deezer para que traiga los charts
-//2) recorrer el resultado par amostrar algo de lo que me traiga en html
-//3) meter el contenido con el formato que ya tienen definido
-
-
-//uso el fetch para llamar a la api
-//uso el query selector para obtener el html donde quiero agregar contenido
-//uso innerhtml para agrergar el contenido en el contendero seleccionado
-
 window.onload= function(){
 
-    const apiRoute = 'https://cors-anywhere.herokuapp.com/https://api.deezer.com/';
-    
-   
-   
-    fetch ('https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart')
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (informacion) {
-   ​ 
-     console.log(informacion.tracks);
-   ​
-   ​    var ul = document.querySelector(".lista-tracks");
-   
-       console.log(ul);
-        
-       var contenido = "";
-   ​
-        for (let i = 0; i < informacion.tracks.data.length; i++) {
-            var element = informacion.tracks.data[i];
-            elementosAInsertarHTML += "<h3>"+ element.title + "</h3>";
-            elementosAInsertarHTML += "<h3>"+ element.albums.title + "</h3>";
-            elementosAInsertarHTML += "<h3>"+ element.artist.name + "</h3>";
-            
-   ​
-   ​
-           ul.innerHTML +='<li class="track"><img class="track-img" src="img/newlight.jpg" alt="newlight"><h2 class="title">    <a href="detail-tracks.html">new light</a></h2><h3 class="artist">    <a href="detail-artists.html">john mayer</a></h3></li>';
-   
-           // contenido += "<h3>" + element.title + "</h3>";
-           // contenido += '<img src="' + element.images.original.url + '" alt="">';          
-        
-   ​
-   ​
-        }
-   ​
-        
-        contenedor.innerHTML = contenido;
-   ​
-   ​
-        
-   ​
-    })
-    .catch(function (error) {
-        console.log("Hubo un error" + error);
-    })
-   
-   
+const apiRoute = 'https://cors-anywhere.herokuapp.com/https://api.deezer.com/';
+
+fetch(apiRoute + '/chart')
+.then(function (response) {
+    return response.json();
+})
+.then(function (informacion) {
+    console.log(informacion.tracks.data);
+    var contenedor = document.querySelector('.lista-tracks');
+    console.log(contenedor);
+    var contenido = " ";
+    for (let i = 0; i < informacion.tracks.data.length; i++) {
+        var element = informacion.tracks.data[i];
+        contenido += '<li class="track">'
+        contenido += '<img class="track-img" src="' + element.album.cover + '"alt="album-cover">'
+        contenido += '<h2 class="title">'
+        contenido += '<a href="detail-tracks.html">' + element.title + '</a>'
+        contenido += '</h2>'
+        contenido += '<h3 class="artist">'
+        contenido += '<a href="detail-artists.html">' + element.artist.name + '</a>'
+        contenido += '</h3>'
+        contenido += '</li>'
+    }
+    contenedor.innerHTML = contenido;
+})
+.catch(function (error) {
+    console.log("Hubo un error" + error);
+})
+
+
+
+                // <li class="album">
+                //     <img class="album-img" src="img/lewis.png" alt="divinely-uninspired-to-a-hellish-extent">
+                //     <h2 class="title">
+                //         <a href="detail-albums.html">divinely uninspired to a hellish extent</a>
+                //     </h2>
+                //     <h3 class="artist">
+                //         <a href="detail-artists.html">lewis capaldi</a>
+                //     </h3>
+                // </li>
+
+
    
    
    //NO BORRAR
