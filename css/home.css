@@ -226,8 +226,8 @@ header .links{
     }
     .buscador form{
         display: block;
-        margin: 170px 50px 0;
-        padding: 0px;
+        margin: 0;
+        padding: 170px 50px 0;
     }
     .buscador form input{
         width: 20%;
@@ -271,7 +271,7 @@ header .links{
         flex-flow: unset;   
     }
     .rankings .albums .lista-albums .album{
-        width: 20%;
+        width: 15.5%;
         margin: 0 10px;
     }
     
@@ -286,7 +286,7 @@ header .links{
         flex-flow: unset;    
     }
     .rankings .artists .lista-artists .artist{
-        width: 20%;
+        width: 15.5%;
         margin: 0 10px;
     }
     .rankings .artists .lista-artists .artist .name {
