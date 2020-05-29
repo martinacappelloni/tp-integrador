@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/home.css">
+    <script src="js/genres.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.4.6/dist/css/uikit.min.css">
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.4.6/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.4.6/dist/js/uikit-icons.min.js"></script>
+    
+</head>
+<body>
+    <header>
+        <div class="logo">
+           <img src="img/logo.png" class="logo-header" alt="logo">
+           <img src="img/play_stop_5.gif" class="gif-logo" alt="gif-logo">
+        </div>
+        <div class="links">
+            <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="...">genres</a></li>
+                <li><a href="playlist.html">playlists</a></li>
+            </ul>
+        </div>
+    </header>
+    <section class="buscador">
+        <form action="" method="GET">
+            <input type="search"  name="" placeholder="Search">
+            <button><i class="fas fa-search"></i></button>
+        </form>
+    </section>
+    <section class="rankings" uk-slider>
+        <div class="tracks uk-slider-container">
+            <h1 class="titulo">genres</h1>
+            <ul class="lista-tracks uk-slider-items">
+                <li class="track">
+                    <img class="track-img" src="img/changes.jpg" alt="intentions">
+                    <h2 class="title">
+                        <a href="detail-tracks.html">intentions</a>
+                    </h2>
+                    <h3 class="artist">
+                        <a href="detail-artists.html">justin bieber</a>
+                    </h3>
+                </li>
+                <li class="track">
+                    <img class="track-img" src="img/newlight.jpg" alt="newlight">
+                    <h2 class="title">
+                        <a href="detail-tracks.html">new light</a>
+                    </h2>
+                    <h3 class="artist">
+                        <a href="detail-artists.html">john mayer</a>
+                    </h3>
+                </li>
+                <li class="track">
+                    <img class="track-img" src="img/sam-smith.jpg" alt="sam-smith">
+                    <h2 class="title">
+                        <a href="detail-tracks.html">i'm not the only one</a>
+                    </h2>
+                    <h3 class="artist">
+                        <a href="detail-artists.html">sam smith</a>
+                    </h3>
+                </li>
+                <li class="track">
+                    <img class="track-img" src="img/eminem.jpg" alt="godzilla">
+                    <h2 class="title">
+                        <a href="detail-tracks.html">godzilla</a>
+                    </h2>
+                    <h3 class="artist">
+                        <a href="detail-artists.html">eminem</a>
+                    </h3>
+                </li>
+                <li class="track">
+                    <img class="track-img" src="img/disturbia.jpeg" alt="disturbia">
+                    <h2 class="title">
+                        <a href="detail-tracks.html">disturbia</a>
+                    </h2>
+                    <h3 class="artist">
+                        <a href="detail-artists.html">rihanna</a>
+                    </h3>
+                </li>
+                <li class="track">
+                    <img class="track-img" src="img/khalid.jpg" alt="khalid">
+                    <h2 class="title">
+                        <a href="detail-tracks.html">american teen</a>
+                    </h2>
+                    <h3 class="artist">
+                        <a href="detail-artists.html">khalid</a>
+                    </h3>
+                </li>
+            </ul>
+
+            <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+            <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+
+        </div>
+        
+    </section>
+    <footer class="mobile">
+        <ul class="iconos">
+            <li>
+                <a href="index.html">
+                    <i class="fas fa-home"></i>
+                </a>
+            </li>
+            <li>
+                <a href="...">
+                    <i class="fas fa-search"></i>
+                </a>
+            </li>
+            <li>
+                <a href="playlist.html">
+                    <i class="fas fa-music"></i>
+                </a>
+            </li>
+        </ul>
+    </footer>
+    <footer class="desktop">
+        <div class="logo">
+            <img src="img/logo.png" class="logo-footer" alt="logo">
+        </div>
+        <ul class="nombres">
+            <li>martina cappelloni</li>
+            <li>francisco dimo</li>
+            <li>mora baylac</li>
+        </ul>
+        <div class="deezer">
+            <img src="img/logo-deezer.png" class="logo-deezer" alt="deezer">
+        </div>
+    </footer>
+</body>
+</html>
