@@ -38,6 +38,9 @@ window.onload = function () {
         contenido += '</div>'
         contenido += '</aside>'
 
+
+            
+
         // for (let i = 0; i < info.data.length; i++) {
 
         // var element = info.data [i];

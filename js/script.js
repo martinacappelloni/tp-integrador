@@ -44,10 +44,10 @@ fetch(apiRoute + '/chart')
         contenido += '<li class="album">'
         contenido += '<img class="album-img" src="' + element.cover + '"alt="album-cover">'
         contenido += '<h2 class="title">'
-        contenido += '<a href="detail-albums.html">' + element.title + '</a>'
+        contenido += '<a href="detail-albums.html?id=' + element.id + '">' + element.title + '</a>'
         contenido += '</h2>'
         contenido += '<h3 class="artist">'
-        contenido += '<a href="detail-artists.html">' + element.artist.name + '</a>'
+        contenido += '<a href="detail-artists.html?id=' + element.artist.id + '">' + element.artist.name + '</a>'
         contenido += '</h3>'
         contenido += '</li>'
     }
