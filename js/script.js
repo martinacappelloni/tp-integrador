@@ -80,6 +80,11 @@ fetch(apiRoute + '/chart')
 .catch(function (error) {
     console.log("Hubo un error" + error);
 })
+
+
+
+
+
    
    //NO BORRAR
    }
