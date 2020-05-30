@@ -29,7 +29,7 @@ window.onload = function () {
 
         for (let i = 0; i < info.genres.data.length; i++) {
             var element = info.genres.data[i];
-            contenido += '<a href="generos.html?id=' + element.id + '">' + element.name + '</a>'
+            contenido += '<a href="detail-genres.html?id=' + element.id + '">' + element.name + '</a>'
         }
 
         contenido += '</li>'

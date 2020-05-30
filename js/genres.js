@@ -4,7 +4,7 @@ window.onload= function(){
     
     
 
-    fetch(apiRoute + '/genre')
+    fetch(apiRoute + '/genre/')
     .then(function (response) {
         return response.json();
     })

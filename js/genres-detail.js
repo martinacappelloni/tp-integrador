@@ -5,6 +5,26 @@ window.onload= function(){
     const urlParams = new URLSearchParams(window.location.search);
     const id = urlParams.get('id');
 
+    fetch(apiRoute + '/genre/' + id)
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (info) {
+        console.log(info);
+        var contenedor = document.querySelector('.titulo');
+        console.log(contenedor);
+        var contenido = " ";
+        
+        contenido += '<h1 class="titulo">'
+        contenido += '<a href="detail-genres.html?id=' + info.id + '">' + info.name + '</a>'
+        contenido += '</h1>'
+            
+        contenedor.innerHTML = contenido;
+    })
+    .catch(function (error) {
+        console.log("Hubo un error" + error);
+    })
+
     fetch(apiRoute + '/genre/' + id + '/artists')
     .then(function (response) {
         return response.json();
