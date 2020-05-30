@@ -17,19 +17,19 @@ window.onload = function () {
     
         contenido += '<aside style="width: 100%;">'
         contenido += '<div class="album-img">'
-        contenido += '<img src="'+ info.cover +'" alt="album-img">'
+        contenido += '<img src="' + info.cover + '" alt="album-img">'
         contenido += '</div>'
         contenido += '<div class="info">'
         contenido += '<ul class="list">'
         contenido += '<li class="title">' + info.title + '</li>'
         contenido += '<li class="artista">'
-        contenido += '<a href="detail-artists.html">' + info.artist.name + '</a>'
+        contenido += '<a href="detail-artists.html?id=' + info.artist.id + '">' + info.artist.name + '</a>'
         contenido += '</li>'
         contenido += '<li class="genre">'
 
         for (let i = 0; i < info.genres.data.length; i++) {
             var element = info.genres.data[i];
-            contenido += '<a href="">' + element.name + '</a>'
+            contenido += '<a href="generos.html?id=' + element.id + '">' + element.name + '</a>'
         }
 
         contenido += '</li>'
@@ -54,7 +54,7 @@ window.onload = function () {
             var element = info.tracks.data[i];
 
             contenido += '<ul class="cancion">'
-            contenido += '<a href="detail-tracks.html">'
+            contenido += '<a href="detail-tracks.html?id=' + element.id + '">'
             contenido += '<li class="song">' + element.title + '</li>'
             contenido += '<li class="artist">' + element.artist.name + '</li>'
             contenido += '</a>'

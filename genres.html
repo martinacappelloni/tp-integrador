@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="css/home.css">
+    <title>Genres</title>
+    <link rel="stylesheet" href="css/genres.css">
     <script src="js/genres.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Assistant&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
@@ -26,7 +26,7 @@
         <div class="links">
             <ul>
                 <li><a href="index.html">home</a></li>
-                <li><a href="...">genres</a></li>
+                <li><a href="genres.html">genres</a></li>
                 <li><a href="playlist.html">playlists</a></li>
             </ul>
         </div>
@@ -37,72 +37,57 @@
             <button><i class="fas fa-search"></i></button>
         </form>
     </section>
-    <section class="rankings" uk-slider>
-        <div class="tracks uk-slider-container">
+    <section class="slider">
+
+        <div class="genres uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider>
             <h1 class="titulo">genres</h1>
-            <ul class="lista-tracks uk-slider-items">
-                <li class="track">
-                    <img class="track-img" src="img/changes.jpg" alt="intentions">
+            <ul class="lista-genres uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-4@m">
+                <li class="genre">
+                    <img class="genre-img" src="img/changes.jpg" alt="intentions">
                     <h2 class="title">
                         <a href="detail-tracks.html">intentions</a>
                     </h2>
-                    <h3 class="artist">
-                        <a href="detail-artists.html">justin bieber</a>
-                    </h3>
                 </li>
-                <li class="track">
-                    <img class="track-img" src="img/newlight.jpg" alt="newlight">
+                <li class="genre">
+                    <img class="genre-img" src="img/changes.jpg" alt="intentions">
                     <h2 class="title">
-                        <a href="detail-tracks.html">new light</a>
+                        <a href="detail-tracks.html">intentions</a>
                     </h2>
-                    <h3 class="artist">
-                        <a href="detail-artists.html">john mayer</a>
-                    </h3>
                 </li>
-                <li class="track">
-                    <img class="track-img" src="img/sam-smith.jpg" alt="sam-smith">
+                <li class="genre">
+                    <img class="genre-img" src="img/changes.jpg" alt="intentions">
                     <h2 class="title">
-                        <a href="detail-tracks.html">i'm not the only one</a>
+                        <a href="detail-tracks.html">intentions</a>
                     </h2>
-                    <h3 class="artist">
-                        <a href="detail-artists.html">sam smith</a>
-                    </h3>
                 </li>
-                <li class="track">
-                    <img class="track-img" src="img/eminem.jpg" alt="godzilla">
+                <li class="genre">
+                    <img class="genre-img" src="img/changes.jpg" alt="intentions">
                     <h2 class="title">
-                        <a href="detail-tracks.html">godzilla</a>
+                        <a href="detail-tracks.html">intentions</a>
                     </h2>
-                    <h3 class="artist">
-                        <a href="detail-artists.html">eminem</a>
-                    </h3>
                 </li>
-                <li class="track">
-                    <img class="track-img" src="img/disturbia.jpeg" alt="disturbia">
+                <li class="genre">
+                    <img class="genre-img" src="img/changes.jpg" alt="intentions">
                     <h2 class="title">
-                        <a href="detail-tracks.html">disturbia</a>
+                        <a href="detail-tracks.html">intentions</a>
                     </h2>
-                    <h3 class="artist">
-                        <a href="detail-artists.html">rihanna</a>
-                    </h3>
                 </li>
-                <li class="track">
-                    <img class="track-img" src="img/khalid.jpg" alt="khalid">
+                <li class="genre">
+                    <img class="genre-img" src="img/changes.jpg" alt="intentions">
                     <h2 class="title">
-                        <a href="detail-tracks.html">american teen</a>
+                        <a href="detail-tracks.html">intentions</a>
                     </h2>
-                    <h3 class="artist">
-                        <a href="detail-artists.html">khalid</a>
-                    </h3>
                 </li>
+
             </ul>
 
             <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
             <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
-
+        
         </div>
         
     </section>
+
     <footer class="mobile">
         <ul class="iconos">
             <li>
@@ -122,6 +107,7 @@
             </li>
         </ul>
     </footer>
+
     <footer class="desktop">
         <div class="logo">
             <img src="img/logo.png" class="logo-footer" alt="logo">
@@ -135,5 +121,6 @@
             <img src="img/logo-deezer.png" class="logo-deezer" alt="deezer">
         </div>
     </footer>
+
 </body>
 </html>
