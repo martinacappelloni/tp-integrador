@@ -5,7 +5,7 @@ window.onload = function () {
     const urlParams = new URLSearchParams(window.location.search);
     const id = urlParams.get('id');
 
-    fetch(apiRoute + '/artist/' + id )
+    fetch(apiRoute + '/artist/' + id)
     .then(function (response) {
         return response.json();
     })
@@ -21,9 +21,9 @@ window.onload = function () {
         contenido += '</div>'
         contenido += '<div class="info">'
         contenido += '<ul class="list">'
-        contenido += '<li class="title"> ' + info.name + '</li>'
+        contenido += '<li class="title">' + info.name + '</li>'
         contenido += '<li class="followers">' + info.nb_fan + ' followers</li>'
-        contenido +='<section class="add">'
+        contenido += '<section class="add">'
         contenido += '<li class="heart">'
         contenido += '<a href=""><i class="far fa-heart"></i></a>'
         contenido += '</li>'
@@ -37,26 +37,40 @@ window.onload = function () {
         contenido += '</ul>'
         contenido += '</div>'
         contenido += '</aside>'
-
-
-            
-
-        // for (let i = 0; i < info.data.length; i++) {
-
-        // var element = info.data [i];
-
-        // contenido += '<div class="canciones">'
-        // contenido += '<ul class="cancion">'
-        // contenido += '<a href="detail-tracks.html">'
-        // contenido += '<li class="song">' + element.tracklist + '</li>'
-        // contenido += '<li class="artist">remastered 2009</li>'
-        // contenido += '</a>'
-        // contenido += '</ul>'
-        // contenido += '</div>'
-
-        // }
+        contenido += '<div class="canciones"></div>'
 
         contenedor.innerHTML = contenido;
+})
+
+.catch(function (error) {
+    console.log("Hubo un error" + error);
+})
+
+
+fetch(apiRoute + '/artist/' + id + '/top')
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (info) {
+
+        console.log(info)
+        var contenedor = document.querySelector('.canciones')
+        var contenido = ' '
+
+        for (let i = 0; i < info.data.length; i++) {
+        var element = info.data [i];
+
+        contenido += '<ul class="cancion">'
+        contenido += '<a href="detail-tracks.html?id=' + element.id + '">'
+        contenido += '<li class="song">' + element.title_short + '</li>'
+        contenido += '<li class="artist">' + element.title_version + '</li>'
+        contenido += '</a>'
+        contenido += '</ul>'
+    
+        }
+
+        contenedor.innerHTML = contenido;
+
 })
 
 .catch(function (error) {

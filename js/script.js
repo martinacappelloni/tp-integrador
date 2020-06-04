@@ -82,12 +82,6 @@ fetch(apiRoute + '/chart')
 })
 
 
-
-
-
-
-
-   
-   //NO BORRAR
-   }
-   //NO BORRAR
+// NO BORRAR
+}
+// NO BORRAR
