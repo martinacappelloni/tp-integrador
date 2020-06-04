@@ -10,6 +10,15 @@ body {
     background-repeat: no-repeat;
     margin: 0px;
 }
+a {
+    text-decoration: white;
+    transition: background-color .5s;
+  }
+  
+  a:hover {
+    background-color: gold;
+    text-transform: capitalize;
+  }
 header {
     width: 100%;
     display: flex;
