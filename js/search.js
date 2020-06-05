@@ -5,65 +5,88 @@ window.onload = function() {
     var queryString = location.search 
     var queryStringObj = new URLSearchParams(queryString)
     var search = queryStringObj.get('search')
-    alert(search)
 
-    fetch(apiRoute + '/search/track' + search)
+    fetch(apiRoute + '/search/track?q=' + search)
     .then(function (response) {
         return response.json();
     })
-    .then(function (resultados) {
-
-        console.log(resultados)
-
-        var contenido = '';
-        var contenedor = document.querySelector('.contenido');
-        for (let i = 0; i < resultados.data.length; i++) {
-            const element = resultados.data[i];
-            contenido += '<h1 class="titulo">'
-            contenido += '<a href="detail-genres.html?id=' + info.id + '">' + info.name + '</a>'
-            contenido += '</h1>'
+    .then(function (informacion) {
+        console.log(informacion.data);
+        var contenedor = document.querySelector('.lista-tracks');
+        console.log(contenedor);
+        var contenido = " ";
+        for (let i = 0; i < informacion.data.length; i++) {
+            var element = informacion.data[i];
+            contenido += '<li class="track">'
+            contenido += '<img class="track-img" src="' + element.album.cover + '"alt="album-cover">'
+            contenido += '<h2 class="title">'
+            contenido += '<a href="detail-tracks.html?id=' + element.id + '">' + element.title_short + '</a>'
+            contenido += '</h2>'
+            contenido += '<h3 class="artist">'
+            contenido += '<a href="detail-artists.html?id=' + element.artist.id + '">' + element.artist.name + '</a>'
+            contenido += '</h3>'
+            contenido += '</li>'
         }
-
-         contenedor.innerHTML = contenido;
+        contenedor.innerHTML = contenido;
     })
-    
     .catch(function (error) {
         console.log("Hubo un error" + error);
     })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- // NO BORRAR CISCO //
-}
-
-// NO BORRAR CISCO //
+    
+    
+    fetch(apiRoute + '/search/album?q=' + search)
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (informacion) {
+        console.log(informacion.data);
+        var contenedor = document.querySelector('.lista-albums');
+        console.log(contenedor);
+        var contenido = " ";
+        for (let i = 0; i < informacion.data.length; i++) {
+            var element = informacion.data[i];
+            contenido += '<li class="album">'
+            contenido += '<img class="album-img" src="' + element.cover + '"alt="album-cover">'
+            contenido += '<h2 class="title">'
+            contenido += '<a href="detail-albums.html?id=' + element.id + '">' + element.title + '</a>'
+            contenido += '</h2>'
+            contenido += '<h3 class="artist">'
+            contenido += '<a href="detail-artists.html?id=' + element.artist.id + '">' + element.artist.name + '</a>'
+            contenido += '</h3>'
+            contenido += '</li>'
+        }
+        contenedor.innerHTML = contenido;
+    })
+    .catch(function (error) {
+        console.log("Hubo un error" + error);
+    })
+    
+    fetch(apiRoute + '/search/artist?q=' + search)
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (informacion) {
+        console.log(informacion.data);
+        var contenedor = document.querySelector('.lista-artists');
+        console.log(contenedor);
+        var contenido = " ";
+        for (let i = 0; i < informacion.data.length; i++) {
+            var element = informacion.data[i];
+            contenido += '<li class="artist">'
+            contenido += '<img class="artist-img" src="' + element.picture + '"alt="artist-picture">'
+            contenido += '<h2 class="name">'
+            contenido += '<a href="detail-artists.html?id=' + element.id + '">' + element.name + '</a>'
+            contenido += '</h2>'
+            contenido += '</li>'
+        }
+        contenedor.innerHTML = contenido;
+    })
+    .catch(function (error) {
+        console.log("Hubo un error" + error);
+    })
+    
+    
+    // NO BORRAR
+    }
+    // NO BORRAR
+    
