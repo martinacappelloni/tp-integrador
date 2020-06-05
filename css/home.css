@@ -16,7 +16,7 @@ a {
   }
   
   a:hover {
-    background-color: gold;
+    background-color: rgb(125, 0, 0);
     text-transform: capitalize;
   }
 header {
