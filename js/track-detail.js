@@ -123,5 +123,3 @@ window.onload = function () {
 //     localStorage.setItem('playlist', playlistParaStorage);
 //     console.log(localStorage);
 
-
-// })

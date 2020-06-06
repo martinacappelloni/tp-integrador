@@ -44,4 +44,4 @@ Window.onload = function(){
     // window.localStorage.getItem('usuario');
     // JSON.parse(window.localStorage.getItem('usuario'));
     }
-    )}
+    
