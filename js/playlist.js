@@ -1,47 +1,47 @@
-Window.onload = function(){
+// Window.onload = function(){
     
-    let recuperoStorage = localStorage.getItem('playlist');
-    let playlist = JSON.parse(recuperoStorage);
+//     let recuperoStorage = localStorage.getItem('playlist');
+//     let playlist = JSON.parse(recuperoStorage);
     
-    let playlistWrapper = document.querySelector('.playlistWrapper');
-    console.log(recuperoStorage);
-    if(recuperoStorage == null || recuperoStorage == "[]"){
-        playlist = [];
-        playlistWrapper.innerHTML += '<li> No hay canciones en tu playlist </li>'
-        console.log(playlistWrapper);
+//     let playlistWrapper = document.querySelector('.playlistWrapper');
+//     console.log(recuperoStorage);
+//     if(recuperoStorage == null || recuperoStorage == "[]"){
+//         playlist = [];
+//         playlistWrapper.innerHTML += '<li> No hay canciones en tu playlist </li>'
+//         console.log(playlistWrapper);
         
-    } else {
+//     } else {
     
-        playlist.forEach(function(idTrack){
-            buscarYMostrarTrack(idTrack);
-        });
-    }
+//         playlist.forEach(function(idTrack){
+//             buscarYMostrarTrack(idTrack);
+//         });
+//     }
     
-    function buscarYMostrarTrack(idTrack){
-        let proxy = 'https://cors-anywhere.herokuapp.com/';
-        let url = proxy + 'https://api.deezer.com/track/' + idTrack;
+//     function buscarYMostrarTrack(idTrack){
+//         let proxy = 'https://cors-anywhere.herokuapp.com/';
+//         let url = proxy + 'https://api.deezer.com/track/' + idTrack;
     
-        fetch(url)
-            .then(function (response) {
-                return response.json();
-            })
-            .then(function (track) {
-                playlistWrapper.innerHTML += '<li>' + '<a href="track.html?id=' + track.id + '">' + track.title + '</a></li>' 
-            })
-            .catch(function(errors){
-                console.log(errors);
+//         fetch(url)
+//             .then(function (response) {
+//                 return response.json();
+//             })
+//             .then(function (track) {
+//                 playlistWrapper.innerHTML += '<li>' + '<a href="track.html?id=' + track.id + '">' + track.title + '</a></li>' 
+//             })
+//             .catch(function(errors){
+//                 console.log(errors);
                 
-            })
-    };
+//             })
+//     };
     
     
-    // var persona = {
-    //     nombre: "Julio Sanchez",
-    //     pais: "Argentina",
-    // }
+//     // var persona = {
+//     //     nombre: "Julio Sanchez",
+//     //     pais: "Argentina",
+//     // }
     
-    // window.localStorage.setItem('usuario', JSON.stringify(persona));
-    // window.localStorage.getItem('usuario');
-    // JSON.parse(window.localStorage.getItem('usuario'));
-    }
+//     // window.localStorage.setItem('usuario', JSON.stringify(persona));
+//     // window.localStorage.getItem('usuario');
+//     // JSON.parse(window.localStorage.getItem('usuario'));
+//     }
     
