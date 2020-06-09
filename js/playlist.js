@@ -1,47 +1,49 @@
-// Window.onload = function(){
+ Window.onload = function(){
+
+
+let storage = localStorage.getItem('playlist');
+let playlist = JSON.parse(storage);
+
+let canciones = document.querySelector('.canciones');
+console.log(recuperoStorage);
+if(storage == null || storage == "[]"){
+    playlist = [];
+    canciones.innerHTML += '<li> No hay canciones en tu playlist </li>'
+    console.log(canciones);
     
-//     let recuperoStorage = localStorage.getItem('playlist');
-//     let playlist = JSON.parse(recuperoStorage);
-    
-//     let playlistWrapper = document.querySelector('.playlistWrapper');
-//     console.log(recuperoStorage);
-//     if(recuperoStorage == null || recuperoStorage == "[]"){
-//         playlist = [];
-//         playlistWrapper.innerHTML += '<li> No hay canciones en tu playlist </li>'
-//         console.log(playlistWrapper);
-        
-//     } else {
-    
-//         playlist.forEach(function(idTrack){
-//             buscarYMostrarTrack(idTrack);
-//         });
-//     }
-    
-//     function buscarYMostrarTrack(idTrack){
-//         let proxy = 'https://cors-anywhere.herokuapp.com/';
-//         let url = proxy + 'https://api.deezer.com/track/' + idTrack;
-    
-//         fetch(url)
-//             .then(function (response) {
-//                 return response.json();
-//             })
-//             .then(function (track) {
-//                 playlistWrapper.innerHTML += '<li>' + '<a href="track.html?id=' + track.id + '">' + track.title + '</a></li>' 
-//             })
-//             .catch(function(errors){
-//                 console.log(errors);
-                
-//             })
-//     };
-    
-    
-//     // var persona = {
-//     //     nombre: "Julio Sanchez",
-//     //     pais: "Argentina",
-//     // }
-    
-//     // window.localStorage.setItem('usuario', JSON.stringify(persona));
-//     // window.localStorage.getItem('usuario');
-//     // JSON.parse(window.localStorage.getItem('usuario'));
-//     }
+} else {
+
+    playlist.forEach(function(id){
+        addTrack(id);
+    });
+}
+
+function addTrack(id){
+    const apiRoute = 'https://cors-anywhere.herokuapp.com/https://api.deezer.com/';
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const id = urlParams.get('id');
+
+    fetch(apiRoute + '/track/' + id)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            canciones.innerHTML +=  '<ul class="cancion">'
+            canciones.innerHTML +=  '<li class="cancion-img"><img src="'+data.album.cover+'" alt="track-img"></li>'
+            canciones.innerHTML +=  '<li class="song">' + data.title + '</li>'
+            canciones.innerHTML +=  '<li class="artist">' + data.artist.name + '</li>'
+            canciones.innerHTML +=  '</ul>'
+
+        })
+        .catch(function(error){
+            console.log(error);
+            
+        })
+}
+ }
+
+
+
+
     
