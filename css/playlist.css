@@ -147,6 +147,30 @@ header .links{
     display: none;
 }
 @media only screen and (min-width:321px) {
+    .contenido{
+        margin-top: 30px;
+    }
+    .contenido .info {
+        padding: 0 30px;
+    }
+    .contenido .playlist-img img {
+        width: 30%;
+    }
+    .contenido .info .list .title{
+        font-size: 25px;
+    }
+    .contenido .info .list .user{
+        font-size: 20px;
+    }
+    .contenido .info .list .likes{
+        font-size: 16px;
+    }
+    .contenido .canciones .cancion .cancion-img img {
+        width: 5%;
+    }
+
+}
+@media only screen and (min-width:769px) {
     body{
         background-image: url(../img/fondo-desk.png);
         background-size: cover;

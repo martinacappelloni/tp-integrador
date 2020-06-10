@@ -153,6 +153,30 @@ header .links {
     display: none;
 }
 @media only screen and (min-width:321px) {
+    .contenido{
+        margin-top: 30px;
+    }
+    .contenido .info {
+        padding: 0 30px;
+    }
+    .contenido .album-img img{
+        width: 30%;
+    }
+    .contenido .info .list .title{
+        font-size: 25px;
+    }
+    .contenido .info .list .artista{
+        font-size: 22px;
+    }
+    .contenido .info .list .genre{
+        font-size: 16px;
+    }
+    .contenido .info .list .date{
+        font-size: 14px;
+    }
+
+}
+@media only screen and (min-width:769px) {
     body{
         background-image: url(../img/fondo-desk.png);
         background-size: cover;
