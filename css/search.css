@@ -181,8 +181,7 @@ header .links{
 
 
 
-
-@media only screen and (min-width:321px) {
+@media only screen and (min-width:426px) {
     body{
         background-image: url(../img/fondo-desk.png);
         background-size: cover;
@@ -234,14 +233,14 @@ header .links{
         display: unset;
         width: 20%;
         position: absolute;
-        left: 200px;
+        left: 120px;
     }
     .buscador form{
         display: block;
         margin: 0;
     }
     .buscador form input{
-        width: 80%;
+        width: 70%;
         background-color: #302c2e;
         padding: 10px;
         border-radius: 10px;
@@ -351,4 +350,17 @@ header .links{
         width: 18%;
         float: right;
     }
+}
+
+@media only screen and (min-width:769px){
+
+    .buscador{
+            width: 20%;
+            position: absolute;
+            left: 200px;
+        }
+    .buscador form input{
+            width: 80%;
+    }
+    
 }
