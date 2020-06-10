@@ -267,15 +267,17 @@ header .links{
         margin: 5px;
         padding: 3px 20px;
         border-right: 2px solid white;
-        text-decoration: none;
         text-transform: capitalize;
         list-style: none;
-        color: white;
         display: flex;
         align-items: center;
         justify-content: center;
         font-size: 15px;
-    } 
+    }
+    .desktop .nombres li a{
+        text-decoration: none;
+        color: white;
+    }
     footer .deezer{
         width: 15%;
     }
