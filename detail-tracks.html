@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Assistant&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     <script src="js/track-detail.js"></script>
+    
 </head>
 <body>
     <header>
@@ -15,11 +16,17 @@
            <img src="img/logo.png" class="logo-header" alt="logo">
            <img src="img/play_stop_5.gif" class="gif-logo" alt="gif-logo"> 
         </div>
+        <div class="buscador">
+            <form action="search.html" method="GET">
+                <input type="search"  name="search" placeholder="Search">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
         <div class="links">
             <ul>                
-                <li><a href="index.html">home</a></li>  
-                <li><a href="genres.html">genres</a></li>
-                <li><a href="playlist.html">playlists</a></li>
+                <li class="uk-animation-toggle " tabindex="0"><a class="uk-animation-scale-up" href="index.html">home</a></li>
+                <li class="uk-animation-toggle " tabindex="0"><a class="uk-animation-scale-up" href="genres.html">genres</a></li>
+                <li class="uk-animation-toggle " tabindex="0"><a class="uk-animation-scale-up" href="playlist.html">playlists</a></li>
             </ul>
         </div>
     </header>

@@ -179,9 +179,21 @@ header .links{
     display: none;
 }
 
+@media only screen and (min-width:426px){
 
+    .rankings .tracks .lista-tracks .track {
+        width: 30%;
+    }
+    .rankings .albums .lista-albums .album {
+        width: 30%;
+    }
+    .rankings .artists .lista-artists .artist {
+        width: 30%;
+    }
+    
+}
 
-@media only screen and (min-width:426px) {
+@media only screen and (min-width:769px) {
     body{
         background-image: url(../img/fondo-desk.png);
         background-size: cover;
@@ -233,14 +245,14 @@ header .links{
         display: unset;
         width: 20%;
         position: absolute;
-        left: 120px;
+        left: 200px;
     }
     .buscador form{
         display: block;
         margin: 0;
     }
     .buscador form input{
-        width: 70%;
+        width: 80%;
         background-color: #302c2e;
         padding: 10px;
         border-radius: 10px;
@@ -352,15 +364,3 @@ header .links{
     }
 }
 
-@media only screen and (min-width:769px){
-
-    .buscador{
-            width: 20%;
-            position: absolute;
-            left: 200px;
-        }
-    .buscador form input{
-            width: 80%;
-    }
-    
-}

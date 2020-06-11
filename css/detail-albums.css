@@ -32,6 +32,9 @@ header .logo .gif-logo{
 header .links {
     display: none;
 }
+.buscador{
+    display: none;
+}
 .contenido{
     width: 100%;
     display: flex;
@@ -152,7 +155,7 @@ header .links {
 .desktop{
     display: none;
 }
-@media only screen and (min-width:321px) {
+@media only screen and (min-width:426px) {
     .contenido{
         margin-top: 30px;
     }
@@ -223,6 +226,30 @@ header .links {
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+    .buscador{
+        display: unset;
+        width: 20%;
+        position: absolute;
+        left: 200px;
+    }
+    .buscador form{
+        display: block;
+        margin: 0;
+    }
+    .buscador form input{
+        width: 80%;
+        background-color: #302c2e;
+        padding: 10px;
+        border-radius: 10px;
+        border:none;
+    }
+    .buscador form button{
+        color: white;
+        background-color: #302c2e;
+        padding: 10px;
+        border-radius: 10px;
+        border:none;
     }
     .contenido{
         margin-top: 200px;
