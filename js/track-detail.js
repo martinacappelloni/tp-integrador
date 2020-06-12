@@ -58,49 +58,63 @@ window.onload = function () {
         //  player.src = 'https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=700&height=350&color=007FEB&layout=dark&size=medium&type=tracks&id=' + idTrack + '&app_id=1'
  
 
+        
+        
+        
+        
+        let storage = localStorage.getItem('playlist');
+        
+        if(storage == null){
+            playlist = [];
+        } else {
+            playlist = JSON.parse(storage);
+        }
+        
+        
+        if(playlist.includes(id)){
+            document.querySelector('.plus').innerHTML = '<a href="playlist.html"><i class="fa fa-minus" aria-hidden="true"></i></a>';
+        }
+        
+        
+        let add = document.querySelector('.plus');
+        
+        add.addEventListener('click', function(e){
+            
+            e.preventDefault();
+            
+            if(playlist.includes(id)){
+                
+                let indiceEnElArray = playlist.indexOf(id);
+                playlist.splice(indiceEnElArray, 1);
+                document.querySelector('.plus').innerHTML = ' <a href="playlist.html"><i class="fas fa-plus"></i></a>';
+                console.log(playlist);
+                
+            } else { 
+                
+                playlist.push(id);
+                document.querySelector('.plus').innerHTML = '<a href="playlist.html"><i class="fa fa-minus" aria-hidden="true"></i></a>';
+                
+            }
+            
+            let storagePlaylist = JSON.stringify(playlist);
+            localStorage.setItem('playlist', storagePlaylist);
+            console.log(localStorage);
+            
+            
+        })
+
+
+
+
+
+
+
+
+
     })
     .catch(function (error) {
         console.log("Hubo un error" + error);
     })
- }
- 
- let storage = localStorage.getItem('playlist');
-
-if(storage == null){
-  playlist = [];
-} else {
-    playlist = JSON.parse(storage);
+    
+    
 }
-
-
-if(playlist.includes(id)){
-    document.querySelector('.plus').innerHTML = '<a href="playlist.html"><i class="fa fa-minus" aria-hidden="true"></i></a>';
-}
-
-
-let add = document.querySelector('.plus');
-
-add.addEventListener('click', function(e){
-    
-    e.preventDefault();
-
-    if(playlist.includes(id)){
-        
-        let indiceEnElArray = playlist.indexOf(id);
-        playlist.splice(indiceEnElArray, 1);
-        document.querySelector('.plus').innerHTML = ' <a href="playlist.html"><i class="fas fa-plus"></i></a>';
-        console.log(playlist);
-        
-    } else { 
-        
-        playlist.push(id);
-        document.querySelector('.plus').innerHTML = '<a href="playlist.html"><i class="fa fa-minus" aria-hidden="true"></i></a>';
-    
-    }
-    
-    let storagePlaylist = JSON.stringify(playlist);
-    localStorage.setItem('playlist', storagePlaylist);
-    console.log(localStorage);
-
-
-})

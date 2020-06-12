@@ -112,6 +112,7 @@ header .links{
     background: linear-gradient(145deg, #333232, #3d3b3c);
     box-shadow:  6px 6px 20px #302f30, 
              -6px -6px 20px #423f40;
+    position: relative;
 }
 .contenido .canciones .cancion li{
     color: white;
@@ -130,7 +131,13 @@ header .links{
     font-size: 10px;
     color: rgb(220, 220, 220);
 }
-
+.contenido .canciones .cancion .time{
+    font-size: 14px;
+    position: absolute;
+    right: 15px;
+    bottom: 20px;
+    color: rgb(213, 213, 213);
+}
 .mobile{
     width: 100%;
     position: fixed;
@@ -303,7 +310,6 @@ header .links{
         right: 30px;
         bottom: 20px;
     }
-    
     .mobile{
         display: none;
     }
