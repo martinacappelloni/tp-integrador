@@ -32,15 +32,19 @@ function addTrack(id){
         .then(function (data) {
 
 
-             //let duration = data.duration / 60 
-             var mind = data.duration % (60 * 60);
-             var minutes = Math.floor(mind / 60);
- console.log(minutes)
-             var secd = mind % 60;
-             var seconds = Math.ceil(secd); 
-var  duracion = minutes + ':' + seconds;
-console.log(duracion);
-            
+//              //let duration = data.duration / 60 
+//              var mind = data.duration % (60 * 60);
+//              var minutes = Math.floor(mind / 60);
+//  console.log(minutes)
+//              var secd = mind % 60;
+//              var seconds = Math.ceil(secd); 
+// var  duracion = minutes + ':' + seconds;
+// console.log(duracion);
+var minutes = Math.floor(time / 60);   
+var seconds = time - minutes * 60;
+var hours = Math.floor(time / 3600);
+time = time - hours * 3600;
+
 
             var contenedor = document.querySelector('.canciones');
             let canciones = ''
