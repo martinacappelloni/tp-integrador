@@ -57,7 +57,7 @@ window.onload = function () {
             contenido += '<a href="detail-tracks.html?id=' + element.id + '">'
             contenido += '<li class="song">' + element.title + '</li>'
             contenido += '<li class="artist">' + element.artist.name + '</li>'
-            contenido += '<li class="time">' + data.duration + '</li>'
+            contenido += '<li class="time">' + element.duration + '</li>'
             contenido += '</a>'
             contenido += '</ul>'
 

@@ -279,7 +279,7 @@ header .links{
         background: linear-gradient(145deg, #393739, #434143);
         box-shadow:  15px 15px 30px #373637, 
              -15px -15px 30px #474447;
-             position: relative;
+        position: relative;
     }
     .contenido .canciones .cancion .song{
         font-size: 22px;
@@ -289,10 +289,11 @@ header .links{
 
     }
     .contenido .canciones .cancion .time{
-        font-size: 20px;
+        font-size: 18px;
         position: absolute;
         right: 30px;
         bottom: 20px;
+        color: rgb(213, 213, 213);
     }
     .mobile{
         display: none;
