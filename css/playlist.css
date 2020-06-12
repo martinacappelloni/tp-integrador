@@ -310,6 +310,11 @@ header .links{
         right: 30px;
         bottom: 20px;
     }
+    iframe{
+        width: 100%;
+        height: 200px;
+
+    }
     .mobile{
         display: none;
     }
