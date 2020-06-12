@@ -33,6 +33,7 @@ function addTrack(id){
             canciones.innerHTML +=  '<li class="cancion-img"><img src="'+data.album.cover+'" alt="track-img"></li>'
             canciones.innerHTML +=  '<li class="song">' + data.title + '</li>'
             canciones.innerHTML +=  '<li class="artist">' + data.artist.name + '</li>'
+            canciones.innerHTML += '<li class="time">' + data.duration + '</li>'
             canciones.innerHTML +=  '</ul>'
 
         })

@@ -64,6 +64,7 @@ fetch(apiRoute + '/artist/' + id + '/top')
         contenido += '<a href="detail-tracks.html?id=' + element.id + '">'
         contenido += '<li class="song">' + element.title_short + '</li>'
         contenido += '<li class="artist">' + element.title_version + '</li>'
+        contenido += '<li class="time">' + data.duration + '</li>'
         contenido += '</a>'
         contenido += '</ul>'
     

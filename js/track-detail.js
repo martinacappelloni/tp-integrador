@@ -46,6 +46,7 @@ window.onload = function () {
         contenido += '<ul class="cancion">'
         contenido += '<li class="song">' + data.title + '</li>'
         contenido += '<li class="artist">' + data.artist.name + '</li>'
+        contenido += '<li class="time">' + data.duration + '</li>'
         contenido += '</ul>'
         contenido += '</div>'
         contenido += '</div>'
