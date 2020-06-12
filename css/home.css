@@ -2,7 +2,10 @@
     box-sizing: border-box;
     font-family: 'Assistant', sans-serif;
 }
-
+html{
+    background: none;
+    line-height: unset;
+}
 body {
     width: 100%;
     background-image: url(../img/fondo.png);
@@ -10,15 +13,7 @@ body {
     background-repeat: no-repeat;
     margin: 0px;
 }
-a {
-    text-decoration: white;
-    transition: background-color .5s;
-  }
-  
-  a:hover {
-    background-color: rgb(125, 0, 0);
-    text-transform: capitalize;
-  }
+
 header {
     width: 100%;
     display: flex;
@@ -299,7 +294,6 @@ header .links{
         width: 15.5%;
         margin: 0 10px;
     }
-    
     .rankings .albums .lista-albums .album .title{
         font-size: 20px;
         margin: 10px 0 5px;
@@ -357,7 +351,12 @@ header .links{
     .desktop .nombres li a{
         text-decoration: none;
         color: white;
+        transition: background-color .5s;
     }
+    .desktop .nombres li a:hover {
+        background-color: rgb(125, 0, 0);
+        text-transform: capitalize;
+      }
     footer .deezer{
         width: 15%;
     }

@@ -2,6 +2,10 @@
     box-sizing: border-box;
     font-family: 'Assistant', sans-serif;
 }
+html{
+    background: none;
+    line-height: unset;
+}
 body {
     width: 100%;
     background-image: url(../img/fondo.png);
@@ -115,6 +119,7 @@ header .links{
     background: #312c2e;
     box-shadow:  10px 10px 25px #221f20, 
                 -10px -10px 25px #40393c;
+    position: relative;
 }
 .contenido .canciones .cancion li{
     color: white;
@@ -126,6 +131,13 @@ header .links{
 .contenido .canciones .cancion .artist{
     font-size: 10px;
     color: rgb(220, 220, 220);
+}
+.contenido .canciones .cancion .time{
+    font-size: 14px;
+    position: absolute;
+    right: 15px;
+    bottom: 20px;
+    color: rgb(213, 213, 213);
 }
 .mobile{
     width: 100%;
@@ -279,7 +291,6 @@ header .links{
         background: linear-gradient(145deg, #393739, #434143);
         box-shadow:  15px 15px 30px #373637, 
              -15px -15px 30px #474447;
-        position: relative;
     }
     .contenido .canciones .cancion .song{
         font-size: 22px;
@@ -290,10 +301,7 @@ header .links{
     }
     .contenido .canciones .cancion .time{
         font-size: 18px;
-        position: absolute;
         right: 30px;
-        bottom: 20px;
-        color: rgb(213, 213, 213);
     }
     .mobile{
         display: none;
@@ -336,7 +344,12 @@ header .links{
     .desktop .nombres li a{
         text-decoration: none;
         color: white;
+        transition: background-color .5s;
     }
+    .desktop .nombres li a:hover {
+        background-color: rgb(125, 0, 0);
+        text-transform: capitalize;
+    } 
     footer .deezer{
         width: 15%;
     }

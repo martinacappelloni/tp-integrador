@@ -2,6 +2,10 @@
     box-sizing: border-box;
     font-family: 'Assistant', sans-serif;
 }
+html{
+    background: none;
+    line-height: unset;
+}
 body {
     width: 100%;
     background-image: url(../img/fondo.png);
@@ -337,7 +341,12 @@ header .links{
     .desktop .nombres li a{
         text-decoration: none;
         color: white;
+        transition: background-color .5s;
     }
+    .desktop .nombres li a:hover {
+        background-color: rgb(125, 0, 0);
+        text-transform: capitalize;
+    } 
     footer .deezer{
         width: 15%;
     }

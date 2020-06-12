@@ -2,14 +2,16 @@
     box-sizing: border-box;
     font-family: 'Assistant', sans-serif;
 }
-
+html{
+    background: none;
+    line-height: unset;
+}
 body {
     width: 100%;
     background-image: url(../img/fondo.png);
     background-size: cover;
     background-repeat: no-repeat;
     margin: 0px;
-    
 }
 header {
     width: 100%;
@@ -191,7 +193,7 @@ header .links{
         border:none;
     }
     .slider{
-        padding: 0 50px;
+        padding: 120px  50px 0;
     }
     .slider .titulo{
         font-size: 30px;
@@ -252,7 +254,12 @@ header .links{
     .desktop .nombres li a{
         text-decoration: none;
         color: white;
+        transition: background-color .5s;
     }
+    .desktop .nombres li a:hover {
+        background-color: rgb(125, 0, 0);
+        text-transform: capitalize;
+    } 
     footer .deezer{
         width: 15%;
     }
