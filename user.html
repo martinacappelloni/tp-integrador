@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User</title>
-    <!-- <script src="js/script.js"></script> -->
+    <!-- <script src="js/artist-detail.js"></script> -->
     <link href="https://fonts.googleapis.com/css2?family=Assistant&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
 
@@ -14,17 +14,18 @@
     <!-- UIkit JS -->
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.4.6/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.4.6/dist/js/uikit-icons.min.js"></script>
-    
-    <link rel="stylesheet" href="css/home.css">
+
+    <link rel="stylesheet" href="css/playlist.css">
+    <link rel="stylesheet" href="css/detail-artists.css">
+
     <script src="js/user.js"></script>
 
-    
 </head>
 <body>
     <header>
         <div class="logo">
            <img src="img/logo.png" class="logo-header" alt="logo">
-           <img src="img/play_stop_5.gif" class="gif-logo" alt="gif-logo">
+           <img src="img/play_stop_5.gif" class="gif-logo" alt="gif-logo"> 
         </div>
         <div class="buscador">
             <form action="search.html" method="GET">
@@ -33,195 +34,76 @@
             </form>
         </div>
         <div class="links">
-            <ul>
+            <ul>                
                 <li class="uk-animation-toggle " tabindex="0"><a class="uk-animation-scale-up" href="index.html">home</a></li>
                 <li class="uk-animation-toggle " tabindex="0"><a class="uk-animation-scale-up" href="genres.html">genres</a></li>
                 <li class="uk-animation-toggle " tabindex="0"><a class="uk-animation-scale-up" href="playlist.html">playlists</a></li>
+                <li class="uk-animation-toggle " tabindex="0"><a class="uk-animation-scale-up" href="user.html"><i class="fas fa-user"></i></a></li>
             </ul>
         </div>
     </header>
-    
-    <section class="rankings">
 
-        <div class="tracks uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider>
-            <h1 class="titulo">tracks</h1>
-            <ul class="lista-tracks uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-4@m">
-
-                 <li class="track" uk-spinner>
-                    <!-- <img class="track-img" src="img/changes.jpg" alt="intentions">
-                    <h2 class="title">
-                        <a href="detail-tracks.html">intentions</a>
-                    </h2>
-                    <h3 class="artist">
-                        <a href="detail-artists.html">justin bieber</a>
-                    </h3> -->
-                </li>
-                <!--<li class="track">
-                    <img class="track-img" src="img/newlight.jpg" alt="newlight">
-                    <h2 class="title">
-                        <a href="detail-tracks.html">new light</a>
-                    </h2>
-                    <h3 class="artist">
-                        <a href="detail-artists.html">john mayer</a>
-                    </h3>
-                </li>
-                <li class="track">
-                    <img class="track-img" src="img/sam-smith.jpg" alt="sam-smith">
-                    <h2 class="title">
-                        <a href="detail-tracks.html">i'm not the only one</a>
-                    </h2>
-                    <h3 class="artist">
-                        <a href="detail-artists.html">sam smith</a>
-                    </h3>
-                </li>
-                <li class="track">
-                    <img class="track-img" src="img/eminem.jpg" alt="godzilla">
-                    <h2 class="title">
-                        <a href="detail-tracks.html">godzilla</a>
-                    </h2>
-                    <h3 class="artist">
-                        <a href="detail-artists.html">eminem</a>
-                    </h3>
-                </li>
-                <li class="track">
-                    <img class="track-img" src="img/disturbia.jpeg" alt="disturbia">
-                    <h2 class="title">
-                        <a href="detail-tracks.html">disturbia</a>
-                    </h2>
-                    <h3 class="artist">
-                        <a href="detail-artists.html">rihanna</a>
-                    </h3>
-                </li>
-                <li class="track">
-                    <img class="track-img" src="img/khalid.jpg" alt="khalid">
-                    <h2 class="title">
-                        <a href="detail-tracks.html">american teen</a>
-                    </h2>
-                    <h3 class="artist">
-                        <a href="detail-artists.html">khalid</a>
-                    </h3>
-                </li> -->
-              
+    <section class="contenido">
+        <!-- <aside style="width: 100%;">
+            <div class="artista-img">
+                <img src="img/beatles.jpg" alt="artista-img">
+            </div>
+            <div class="info">
+                <ul class="list">
+                    <li class="title">the beatles</li>
+                    <li class="followers">22,977,599</li>
+                    <section class="add">
+                        <li class="heart">
+                            <a href="">
+                                <i class="far fa-heart"></i>
+                            </a>
+                        </li>
+                        <li class="plus">
+                            <a href="playlist.html">
+                                <i class="fas fa-plus"></i>
+                            </a>
+                        </li>
+                        <li class="elipsis">
+                            <a href="">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </a>
+                        </li>
+                    </section>
+                </ul>
+            </div>
+        </aside> -->
+        <div class="canciones">
+            <!-- <ul class="cancion">
+                <a href="detail-tracks.html">
+                    <li class="song">here comes the sun</li>
+                    <li class="artist">remastered 2009</li>
+                </a>
             </ul>
-        
-            <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
-            <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
-        
-        </div>
-        
-        <div class="albums uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider>
-            <h1 class="titulo">albums</h1>
-            <ul class="lista-albums uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-4@m">
-                <li class="album" uk-spinner>
-                    <!-- <img class="album-img" src="img/lewis.png" alt="divinely-uninspired-to-a-hellish-extent">
-                    <h2 class="title">
-                        <a href="detail-albums.html">divinely uninspired to a hellish extent</a>
-                    </h2>
-                    <h3 class="artist">
-                        <a href="detail-artists.html">lewis capaldi</a>
-                    </h3> -->
-                </li>
-                <!-- <li class="album">
-                    <img class="album-img" src="img/colores.jpeg" alt="colores">
-                    <h2 class="title">
-                        <a href="detail-albums.html">colores</a>
-                    </h2>
-                    <h3 class="artist">
-                        <a href="detail-artists.html">j balvin</a>
-                    </h3>
-                </li>
-                <li class="album">
-                    <img class="album-img" src="img/ahora.jpg" alt="ahora">
-                    <h2 class="title">
-                        <a href="detail-albums.html">ahora</a>
-                    </h2>
-                    <h3 class="artist">
-                        <a href="detail-artists.html">reik</a>
-                    </h3>
-                </li>
-                <li class="album">
-                    <img class="album-img" src="img/younger-now.jpeg" alt="younger-now">
-                    <h2 class="title">
-                        <a href="detail-albums.html">younger now</a>
-                    </h2>
-                    <h3 class="artist">
-                        <a href="detail-artists.html">miley cirus</a>
-                    </h3>
-                </li>
-                <li class="album">
-                    <img class="album-img" src="img/v.jpeg" alt="v">
-                    <h2 class="title">
-                        <a href="detail-albums.html">v</a>
-                    </h2>
-                    <h3 class="artist">
-                        <a href="detail-artists.html">maroon 5</a>
-                    </h3>
-                </li>
-                <li class="album">
-                    <img class="album-img" src="img/revenge.jpeg" alt="revenge-of-the-dreamers">
-                    <h2 class="title">
-                        <a href="detail-albums.html">revenge of the dreamers</a>
-                    </h2>
-                    <h3 class="artist">
-                        <a href="detail-artists.html">dreamville, j. cole</a>
-                    </h3>
-                </li> -->
-              
+            <ul class="cancion">
+                <a href="detail-tracks.html">
+                    <li class="song">let it be</li>
+                    <li class="artist">remastered 2009</li>
+                </a>
             </ul>
-        
-            <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
-            <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
-        
-        </div>
-
-        <div class="artists uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider>
-            <h1 class="titulo">artists</h1>
-            <ul class="lista-artists uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-4@m">
-
-                <li class="artist" uk-spinner>
-                    <!-- <img class="artist-img" src="img/beatles.jpg" alt="the-beatles">
-                    <h2 class="name">
-                        <a href="detail-artists.html">the beatles</a>
-                    </h2> -->
-                </li>
-                <!-- <li class="artist">
-                    <img class="artist-img" src="img/camilo.jpg" alt="camilo">
-                    <h2 class="name">
-                        <a href="detail-artists.html">camilo</a>
-                    </h2>
-                </li>
-                <li class="artist">
-                    <img class="artist-img" src="img/sech.jpg" alt="sech">
-                    <h2 class="name">
-                        <a href="detail-artists.html">sech</a>
-                    </h2>
-                </li>
-                <li class="artist">
-                    <img class="artist-img" src="img/dipy.jpeg" alt="el-dipy">
-                    <h2 class="name">
-                        <a href="detail-artists.html">el dipy</a>
-                    </h2>
-                </li>
-                <li class="artist">
-                    <img class="artist-img" src="img/boris.jpeg" alt="boris-brejcha">
-                    <h2 class="name">
-                        <a href="detail-artists.html">boris brejcha</a>
-                    </h2>
-                </li>
-                <li class="artist">
-                    <img class="artist-img" src="img/freddie.jpeg" alt="freddie-mercury">
-                    <h2 class="name">
-                        <a href="detail-artists.html">freddie mercury</a>
-                    </h2>
-                </li> -->
-              
+            <ul class="cancion">
+                <a href="detail-tracks.html">
+                    <li class="song">come together</li>
+                    <li class="artist">remastered 2009</li>
+                </a>
             </ul>
-        
-            <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
-            <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
-        
-        </div>
-
+            <ul class="cancion">
+                <a href="detail-tracks.html">
+                    <li class="song">yesterday</li>
+                    <li class="artist">remastered 2009</li>
+                </a>
+            </ul>
+            <ul class="cancion">
+                <a href="detail-tracks.html">
+                    <li class="song">hey jude</li>
+                    <li class="artist">remastered 2009</li>
+                </a>
+            </ul> --> 
+        </div> 
     </section>
 
     <footer class="mobile">
@@ -245,12 +127,12 @@
     </footer>
     <footer class="desktop">
         <div class="logo">
-            <img src="img/logo.png" class="logo-footer" alt="logo">
+            <img src="img/logo.png" class="logo-footer" alt="logo"> 
         </div>
         <ul class="nombres">
-                <li><a href="https://www.instagram.com/martucappelloni/">martina cappelloni</a></li>
-                <li><a href="https://www.instagram.com/franciscodimoo/">francisco dimo</a></li>
-                <li><a href="https://www.instagram.com/morabaylac/">mora baylac</a></li>
+            <li><a href="https://www.instagram.com/martucappelloni/">martina cappelloni</a></li>
+            <li><a href="https://www.instagram.com/franciscodimoo/">francisco dimo</a></li>
+            <li><a href="https://www.instagram.com/morabaylac/">mora baylac</a></li>
         </ul>
         <div class="deezer">
             <img src="img/logo-deezer.png" class="logo-deezer" alt="deezer">

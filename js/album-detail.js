@@ -70,6 +70,10 @@ window.onload = function () {
         contenido += '</div>'
 
         contenedor.innerHTML = contenido;
+
+
+
+        
 })
 
 .catch(function (error) {

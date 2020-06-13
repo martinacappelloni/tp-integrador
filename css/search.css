@@ -38,7 +38,24 @@ header .links{
     display: none;
 }
 .buscador{
-    display: none;
+    width: 80%;
+    margin-left: 15px;
+    margin-bottom: 20px;
+}
+.buscador form input{
+    width: 80%;
+    background-color: #302c2e;
+    padding: 10px;
+    border-radius: 10px;
+    border:none;
+    color: white;
+}
+.buscador form button{
+    color: white;
+    background-color: #302c2e;
+    padding: 10px;
+    border-radius: 10px;
+    border:none;
 }
 .rankings{
     padding: 0 15px;

@@ -37,13 +37,14 @@ function addTrack(id){
             canciones +=  '<li class="cancion-img"><img src="' + data.album.cover + '" alt="track-img"></li>'
             canciones +=  '<li class="song">' + data.title + '</li>'
             canciones +=  '<li class="artist">' + data.artist.name + '</li>'
-            canciones += '<li class="time">' + duracion + '</li>'
+            canciones +=  '<li class="time">' + duracion + '</li>'
             canciones +=  '</ul>'
 
             contenedor.innerHTML += canciones;
 
 
             var player = document.querySelectorAll('.cancion')
+
             for (let i = 0; i < player.length; i++) {
                 const element = player[i];
 
@@ -65,29 +66,6 @@ function addTrack(id){
             console.log(error);
             
         })
-
-//     const apiRouteReproductor = 'https://cors-anywhere.herokuapp.com/https://api.deezer.com/oembed?url=http://www.deezer.com/track/';
-
-//     const urlParams = new URLSearchParams(window.location.search);
-//     const cancion = urlParams.get('id');
-
-//     fetch(apiRouteReproductor + cancion)
-//     .then(function (response) {
-//         return response.json();
-//     })
-//     .then(function (info) {
-
-//         // console.log(info)
-//         // var contenedor = document.querySelector('.contenido')
-//         // var contenido = ' '
-    
-       
-// })
-
-// .catch(function (error) {
-//     console.log("Hubo un error" + error);
-// })
-
 
 
 

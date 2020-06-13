@@ -1,85 +1,107 @@
 window.onload= function(){
 
     const apiRoute = 'https://cors-anywhere.herokuapp.com/https://api.deezer.com/';
-    
-    fetch(apiRoute + '/user/me')
+
+    // const urlParams = new URLSearchParams(window.location.search);
+    // const id = urlParams.get('id');
+
+
+
+    fetch(apiRoute + 'user/3677140122')
     .then(function (response) {
         return response.json();
     })
-    .then(function (informacion) {
-        console.log(informacion.tracks.data);
-        var contenedor = document.querySelector('.lista-tracks');
-        console.log(contenedor);
-        var contenido = " ";
-        for (let i = 0; i < informacion.tracks.data.length; i++) {
-            var element = informacion.tracks.data[i];
-            contenido += '<li class="track">'
-            contenido += '<img class="track-img" src="' + element.album.cover + '"alt="album-cover">'
-            contenido += '<h2 class="title">'
-            contenido += '<a href="detail-tracks.html?id=' + element.id + '">' + element.name + '</a>'
-            contenido += '</h2>'
-            contenido += '<h3 class="artist">'
-            contenido += '<a href="detail-artists.html?id=' + element.artist.id + '">' + element.artist.name + '</a>'
-            contenido += '</h3>'
-            contenido += '</li>'
-        }
+    .then(function (info) {
+        console.log(info)
+        var contenedor = document.querySelector('.contenido')
+        var contenido = ' '
+    
+        contenido += '<aside style="width: 100%;">'
+        contenido += '<div class="artista-img">'
+        contenido += '<img src="'+ info.picture +'" alt="artista-img">'
+        contenido += '</div>'
+        contenido += '<div class="info">'
+        contenido += '<ul class="list">'
+        contenido += '<li class="title">@' + info.name + '</li>'
+        contenido += '<li class="followers">from ' + info.country + '</li>'
+        // contenido += '<section class="add">'
+        // contenido += '<li class="heart">'
+        // contenido += '<a href=""><i class="far fa-heart"></i></a>'
+        // contenido += '</li>'
+        // contenido += '<li class="plus">'
+        // contenido += '<a href="playlist.html"><i class="fas fa-plus"></i></a>'
+        // contenido += '</li>'
+        // contenido += '<li class="elipsis">'
+        // contenido += '<a href=""><i class="fas fa-ellipsis-h"></i></a>'
+        // contenido += '</li>'
+        // contenido += '</section>'
+        contenido += '</ul>'
+        contenido += '</div>'
+        contenido += '</aside>'
+        contenido += '<div class="canciones"></div>'
+
         contenedor.innerHTML = contenido;
     })
     .catch(function (error) {
         console.log("Hubo un error" + error);
     })
+
+
+
+
+
+    let storage = localStorage.getItem('heart');
+    let heart = JSON.parse(storage);
+    
+    let canciones = document.querySelector('.canciones');
+    
+    if(storage == null || storage == "[]"){
+        heart = [];
+        canciones.innerHTML += '<li> No hay canciones en tu playlist </li>'
+        console.log(canciones);
+        
+    } else {
+    
+        heart.forEach(function(cancion){
+            addTrack(cancion);
+        });
+    }
+    
+    function addTrack(id){
+        
+        const apiRoute = 'https://cors-anywhere.herokuapp.com/https://api.deezer.com/';
+    
+        fetch(apiRoute + '/track/' + id)
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+    
+                var minutes = Math.floor(data.duration / 60);   
+                var seconds = data.duration - minutes * 60;
+                var duracion = minutes + ':' + seconds;
+    
+                var contenedor = document.querySelector('.canciones');
+                let canciones = ''
+                canciones +=  '<ul class="cancion" id="' + data.id + '">'
+                canciones +=  '<li class="cancion-img"><img src="' + data.album.cover + '" alt="track-img"></li>'
+                canciones +=  '<li class="song">' + data.title + '</li>'
+                canciones +=  '<li class="artist">' + data.artist.name + '</li>'
+                canciones +=  '<li class="time">' + duracion + '</li>'
+                canciones +=  '</ul>'
+    
+                contenedor.innerHTML += canciones;
     
     
-    // fetch(apiRoute + '/chart')
-    // .then(function (response) {
-    //     return response.json();
-    // })
-    // .then(function (informacion) {
-    //     console.log(informacion.albums.data);
-    //     var contenedor = document.querySelector('.lista-albums');
-    //     console.log(contenedor);
-    //     var contenido = " ";
-    //     for (let i = 0; i < informacion.albums.data.length; i++) {
-    //         var element = informacion.albums.data[i];
-    //         contenido += '<li class="album">'
-    //         contenido += '<img class="album-img" src="' + element.cover + '"alt="album-cover">'
-    //         contenido += '<h2 class="title">'
-    //         contenido += '<a href="detail-albums.html?id=' + element.id + '">' + element.title + '</a>'
-    //         contenido += '</h2>'
-    //         contenido += '<h3 class="artist">'
-    //         contenido += '<a href="detail-artists.html?id=' + element.artist.id + '">' + element.artist.name + '</a>'
-    //         contenido += '</h3>'
-    //         contenido += '</li>'
-    //     }
-    //     contenedor.innerHTML = contenido;
-    // })
-    // .catch(function (error) {
-    //     console.log("Hubo un error" + error);
-    // })
     
-    // fetch(apiRoute + '/chart')
-    // .then(function (response) {
-    //     return response.json();
-    // })
-    // .then(function (informacion) {
-    //     console.log(informacion.artists.data);
-    //     var contenedor = document.querySelector('.lista-artists');
-    //     console.log(contenedor);
-    //     var contenido = " ";
-    //     for (let i = 0; i < informacion.artists.data.length; i++) {
-    //         var element = informacion.artists.data[i];
-    //         contenido += '<li class="artist">'
-    //         contenido += '<img class="artist-img" src="' + element.picture + '"alt="artist-picture">'
-    //         contenido += '<h2 class="name">'
-    //         contenido += '<a href="detail-artists.html?id=' + element.id + '">' + element.name + '</a>'
-    //         contenido += '</h2>'
-    //         contenido += '</li>'
-    //     }
-    //     contenedor.innerHTML = contenido;
-    // })
-    // .catch(function (error) {
-    //     console.log("Hubo un error" + error);
-    // })
+    
+    
+            })
+            .catch(function(error){
+                console.log(error);
+                
+            })
+    }
     
     
     // NO BORRAR

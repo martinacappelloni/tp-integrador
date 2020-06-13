@@ -112,6 +112,56 @@ window.onload = function () {
 
 
 
+        let storageHeart = localStorage.getItem('heart');
+        
+        if(storageHeart == null){
+            heart = [];
+        } else {
+            heart = JSON.parse(storageHeart);
+        }
+        
+        
+        if(heart.includes(id)){
+            document.querySelector('.heart').innerHTML = '<a href=""><i class="fas fa-heart"></i></a>';
+        }
+        
+        
+        let like = document.querySelector('.heart');
+        
+        like.addEventListener('click', function(e){
+            
+            e.preventDefault();
+            
+            if(heart.includes(id)){
+                
+                let indiceEnElArray = heart.indexOf(id);
+                heart.splice(indiceEnElArray, 1);
+                document.querySelector('.heart').innerHTML = '<a href=""><i class="far fa-heart"></i></a>';
+                console.log(heart);
+                
+            } else { 
+                
+                heart.push(id);
+                document.querySelector('.heart').innerHTML = '<a href=""><i class="fas fa-heart"></i></a>';
+                
+            }
+            
+            let storageHeart = JSON.stringify(heart);
+            localStorage.setItem('heart', storageHeart);
+            console.log(localStorage);
+            
+            location.href = 'user.html'
+            
+        })
+
+
+
+
+
+
+
+
+
     })
     .catch(function (error) {
         console.log("Hubo un error" + error);
