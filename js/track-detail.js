@@ -25,7 +25,7 @@ window.onload = function () {
         contenido += '<div style="width: 100%;">'
         contenido += '<div class="info">'
         contenido += '<ul class="list">'
-        contenido += '<li class="title">' + data.title + '</li>'
+        contenido += '<li class="title">' + data.title_short + '</li>'
         contenido += '<li class="subtitle">'
         contenido += '<a href="detail-albums.html?id=' + data.album.id + '">' + data.album.title + '</a>'
         contenido += '</li>'
@@ -47,8 +47,8 @@ window.onload = function () {
         contenido += '</ul>'
         contenido += '</div>'
         contenido += '<div class="canciones">'
-        contenido += '<ul class="cancion">'
-        contenido += '<li class="song">' + data.title + '</li>'
+        contenido += '<ul class="cancion" id="' + data.id + '">'
+        contenido += '<li class="song">' + data.title_short + '</li>'
         contenido += '<li class="artist">' + data.artist.name + '</li>'
         contenido += '<li class="time">' + duracion + '</li>'
         contenido += '</ul>'
@@ -58,10 +58,24 @@ window.onload = function () {
 
         contenedor.innerHTML = contenido;
 
+        // player
+        
+        var player = document.querySelectorAll('.cancion')
+
+        for (let i = 0; i < player.length; i++) {
+            const element = player[i];
+
+            element.addEventListener('click', function(){
+                console.log(this.id) 
+                var iframe = document.querySelector('iframe')
+                iframe.src = "https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=700&height=350&color=007FEB&layout=dark&size=medium&type=tracks&id=" + this.id + "&app_id=1"
+            })
+
+        }
         
         
-        
-        
+        // storage
+
         let storage = localStorage.getItem('playlist');
         
         if(storage == null){

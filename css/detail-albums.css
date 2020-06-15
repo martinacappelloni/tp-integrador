@@ -88,7 +88,7 @@ header .links {
     text-decoration: none;
 }
 .contenido .info .list .genre{
-    font-size: 12px;
+    font-size: 14px;
 }
 .contenido .info .list .genre a{
     color: white;
@@ -168,8 +168,11 @@ header .links {
     display: none;
 }
 @media only screen and (min-width:426px) {
+    header .logo .logo-header {
+        width: 8%;
+    }
     .contenido{
-        margin-top: 30px;
+        margin-top: 20px;
     }
     .contenido .info {
         padding: 0 30px;
@@ -189,7 +192,12 @@ header .links {
     .contenido .info .list .date{
         font-size: 14px;
     }
-
+    .contenido .canciones .cancion .artist {
+        font-size: 12px;
+    }
+    .contenido .canciones .cancion .time {
+        font-size: 16px;
+    }
 }
 @media only screen and (min-width:769px) {
     body{

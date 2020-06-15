@@ -68,7 +68,7 @@ header .links{
     margin: 0;    
 }
 .slider .genres .lista-genres .genre{
-    width: 46%;
+    width: 45%;
     margin: 0 8px 15px;
     list-style: none;
     text-transform: capitalize;
@@ -112,10 +112,12 @@ header .links{
 }
 
 @media only screen and (min-width:426px) {
-
+    header .logo .logo-header {
+        width: 8%;
+    }
     .slider .genres .lista-genres .genre {
-        width: 30%;
-
+        width: 28%;
+    }
 }
 
 
@@ -198,7 +200,7 @@ header .links{
     }
     .slider .titulo{
         font-size: 30px;
-        margin-bottom: 20px;
+        margin: 20px 0;
     }
     .slider .genres{
         margin: 30px 0 40px;
@@ -207,7 +209,7 @@ header .links{
         flex-flow: unset;
     }
     .slider .genres .lista-genres .genre{
-        width: 15.5%;
+        width: 15.4%;
         margin: 0 10px;
     }
     .slider .genres .lista-genres .genre .title{
@@ -270,4 +272,3 @@ header .links{
     }
 }
 
-}

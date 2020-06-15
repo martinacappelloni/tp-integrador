@@ -60,11 +60,15 @@ fetch(apiRoute + '/artist/' + id + '/top')
         for (let i = 0; i < info.data.length; i++) {
         var element = info.data [i];
 
+        var minutes = Math.floor(element.duration / 60);   
+        var seconds = element.duration - minutes * 60;
+        var duracion = minutes + ':' + seconds;
+
         contenido += '<ul class="cancion">'
         contenido += '<a href="detail-tracks.html?id=' + element.id + '">'
         contenido += '<li class="song">' + element.title_short + '</li>'
-        contenido += '<li class="artist">' + element.title_version + '</li>'
-        contenido += '<li class="time">' + element.duration + '</li>'
+        contenido += '<li class="artist">' + element.artist.name + '</li>'
+        contenido += '<li class="time">' + duracion + '</li>'
         contenido += '</a>'
         contenido += '</ul>'
     

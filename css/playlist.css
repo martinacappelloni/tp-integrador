@@ -46,7 +46,7 @@ header .links{
     flex-flow: row wrap;
     justify-content: center;
     align-content: center;
-    margin-bottom: 70px;
+    margin-bottom: 160px;
 }
 .contenido .playlist-img{
     width: 100%;
@@ -139,12 +139,22 @@ header .links{
     bottom: 20px;
     color: rgb(213, 213, 213);
 }
+.iframe{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+iframe {
+    width: 100%;
+    height: 92px;
+}
 .mobile{
     width: 100%;
     position: fixed;
     bottom: 0;
     left: 0;
     backdrop-filter: blur(6px);
+    margin-bottom: 92px;
 }
 .iconos{
     margin: 0;
@@ -161,6 +171,9 @@ header .links{
     display: none;
 }
 @media only screen and (min-width:426px) {
+    header .logo .logo-header {
+        width: 8%;
+    }
     .contenido{
         margin-top: 30px;
     }
@@ -181,6 +194,12 @@ header .links{
     }
     .contenido .canciones .cancion .cancion-img img {
         width: 5%;
+    }
+    .contenido .canciones .cancion .artist {
+        font-size: 12px;
+    }
+    .contenido .canciones .cancion .time {
+        font-size: 16px;
     }
 
 }
@@ -258,7 +277,7 @@ header .links{
         border:none;
     }
     .contenido{
-        margin-top: 200px;
+        margin: 200px 0 50px;
         display: grid;
         grid-template-columns: 20% 70%;
     }
@@ -311,15 +330,6 @@ header .links{
         right: 30px;
         bottom: 20px;
     }
-    .iframe{
-        width: 100%;
-        position: fixed;
-        bottom: -110px;
-    }
-    iframe{
-        width: 100%;
-        height: 200px;
-    }
     .mobile{
         display: none;
     }
@@ -328,7 +338,7 @@ header .links{
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 40px 0 110px 0;
+        margin-bottom: 110px;
     }
     .desktop .nombres li:last-child{
         border-right: none;

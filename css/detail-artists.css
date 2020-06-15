@@ -81,7 +81,7 @@ header .links {
     font-size: 20px;
 }
 .contenido .info .list .followers{
-    font-size: 12px;
+    font-size: 14px;
 }
 .contenido .info .list .top{
     font-size: 12px;
@@ -112,6 +112,7 @@ header .links {
     background: linear-gradient(145deg, #2d292a, #363132);
     box-shadow:  6px 6px 20px #2b2728, 
              -6px -6px 20px #3a3536;
+    position: relative;
 }
 .contenido .canciones .cancion a{
     text-decoration: none;
@@ -126,6 +127,13 @@ header .links {
 .contenido .canciones .cancion .artist{
     font-size: 10px;
     color: rgb(220, 220, 220);
+}
+.contenido .canciones .cancion .time{
+    font-size: 14px;
+    position: absolute;
+    right: 15px;
+    bottom: 20px;
+    color: rgb(213, 213, 213);
 }
 .mobile{
     width: 100%;
@@ -150,14 +158,17 @@ header .links {
 }
 
 @media only screen and (min-width:426px) {
+    header .logo .logo-header {
+        width: 8%;
+    }
     .contenido{
-        margin-top: 30px;
+        margin-top: 20px;
     }
     .contenido .info {
         padding: 0 30px;
     }
     .contenido .artista-img img {
-        width: 35%;
+        width: 30%;
     }
     .contenido .info .list .title{
         font-size: 25px;
@@ -165,7 +176,12 @@ header .links {
     .contenido .info .list .followers{
         font-size: 16px;
     }
-
+    .contenido .canciones .cancion .artist {
+        font-size: 12px;
+    }
+    .contenido .canciones .cancion .time {
+        font-size: 16px;
+    }
 }
 @media only screen and (min-width:769px){
     body{
@@ -291,6 +307,10 @@ header .links {
         right: 30px;
         bottom: 20px;
         color: rgb(213, 213, 213);
+    }
+    .contenido .canciones .cancion .time{
+        font-size: 18px;
+        right: 30px;
     }
     .mobile{
         display: none;

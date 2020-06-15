@@ -59,7 +59,7 @@ header .links{
 }
 .rankings{
     padding: 0 15px;
-    margin-bottom: 62px;
+    margin-bottom: 70px;
 }
 .rankings .titulo{
     color: white;
@@ -74,7 +74,8 @@ header .links{
 }
 .rankings .tracks{
     width: 100%;
-    margin: 0 0 30px;
+    margin: 0;
+    margin-bottom: 30px;
 }
 .rankings .tracks .lista-tracks{
     width: 100%;
@@ -86,7 +87,7 @@ header .links{
 }
 .rankings .tracks .lista-tracks .track{
     width: 46%;
-    margin: 0 8px 15px;
+    margin: 0 8px;
     list-style: none;
     text-transform: capitalize;
     color: white;
@@ -108,7 +109,7 @@ header .links{
 }
 .rankings .albums{
     width: 100%;
-    margin: 30px 0;
+    margin: 10px 0;
 }
 .rankings .albums .lista-albums{
     width: 100%;
@@ -119,7 +120,7 @@ header .links{
 }
 .rankings .albums .lista-albums .album{
     width: 46%;
-    margin: 0 8px 15px;
+    margin: 0 8px;
     list-style: none;
     text-transform: capitalize;
     color: white;
@@ -141,7 +142,7 @@ header .links{
 }
 .rankings .artists{
     width: 100%;
-    margin: 30px 0 0;
+    margin: 10px 0;
 }
 .rankings .artists .lista-artists{
     width: 100%;
@@ -152,7 +153,7 @@ header .links{
 }
 .rankings .artists .lista-artists .artist{
     width: 46%;
-    margin: 0 8px 15px;
+    margin: 0 8px;
     list-style: none;
     text-transform: capitalize;
     color: white;
@@ -193,13 +194,16 @@ header .links{
 @media only screen and (min-width:426px){
 
     .rankings .tracks .lista-tracks .track {
-        width: 30%;
+        width: 28%;
+        margin-bottom: 15px;
     }
     .rankings .albums .lista-albums .album {
-        width: 30%;
+        width: 28%;
+        margin-bottom: 15px;
     }
     .rankings .artists .lista-artists .artist {
-        width: 30%;
+        width: 28%;
+        margin-bottom: 15px;
     }
     
 }

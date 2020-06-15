@@ -35,7 +35,7 @@ function addTrack(id){
             let canciones = ''
             canciones +=  '<ul class="cancion" id="' + data.id + '">'
             canciones +=  '<li class="cancion-img"><img src="' + data.album.cover + '" alt="track-img"></li>'
-            canciones +=  '<li class="song">' + data.title + '</li>'
+            canciones +=  '<li class="song">' + data.title_short + '</li>'
             canciones +=  '<li class="artist">' + data.artist.name + '</li>'
             canciones +=  '<li class="time">' + duracion + '</li>'
             canciones +=  '</ul>'
@@ -53,8 +53,7 @@ function addTrack(id){
                     var iframe = document.querySelector('iframe')
                     iframe.src = "https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=700&height=350&color=007FEB&layout=dark&size=medium&type=tracks&id=" + this.id + "&app_id=1"
                 })
-
-                
+ 
             }
 
 
@@ -66,11 +65,12 @@ function addTrack(id){
             console.log(error);
             
         })
-
-
-
+    }
+    
+//no borrar 
 }
- }
+//no borrar 
+
 
 
 

@@ -57,7 +57,7 @@ window.onload= function(){
     
     if(storage == null || storage == "[]"){
         heart = [];
-        canciones.innerHTML += '<li> No hay canciones en tu playlist </li>'
+        canciones.innerHTML += '<li> No hay canciones en tu perfil </li>'
         console.log(canciones);
         
     } else {
@@ -91,10 +91,20 @@ window.onload= function(){
                 canciones +=  '</ul>'
     
                 contenedor.innerHTML += canciones;
+
+
+                var player = document.querySelectorAll('.cancion')
+
+                for (let i = 0; i < player.length; i++) {
+                    const element = player[i];
+
+                    element.addEventListener('click', function(){
+                        console.log(this.id) 
+                        var iframe = document.querySelector('iframe')
+                        iframe.src = "https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=700&height=350&color=007FEB&layout=dark&size=medium&type=tracks&id=" + this.id + "&app_id=1"
+                    })
     
-    
-    
-    
+                }
     
             })
             .catch(function(error){
@@ -104,7 +114,7 @@ window.onload= function(){
     }
     
     
-    // NO BORRAR
-    }
-    // NO BORRAR
+// NO BORRAR
+}
+// NO BORRAR
     
