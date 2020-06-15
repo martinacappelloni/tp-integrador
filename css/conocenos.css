@@ -2,10 +2,12 @@
     box-sizing: border-box;
     font-family: 'Assistant', sans-serif;
 }
-.conocenos{
+.contenido{ 
     display: flex;
-    flex-wrap: wrap;
-    color: white;
+    flex-wrap: wrap;}
+
+.contenido .conocenos{
+   color: white;
 }
 html{
     background: none;
@@ -45,7 +47,7 @@ header .links{
 .buscador{
     display: none;
 }
-.contenido{
+/* .contenido{
     width: 100%;
     display: flex;
     flex-flow: row wrap;
@@ -143,7 +145,7 @@ header .links{
     right: 15px;
     bottom: 20px;
     color: rgb(213, 213, 213);
-}
+} */
 .mobile{
     width: 100%;
     position: fixed;
