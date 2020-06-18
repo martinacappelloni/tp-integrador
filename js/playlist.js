@@ -1,5 +1,40 @@
 window.onload = function(){
 
+// var preguntaPlaylist = '¿Qué nombre le queres poner a la playlist?'
+// var nombrePlaylist = prompt(preguntaPlaylist)
+
+
+// let title = document.querySelector('.title');
+
+// if (nombrePlaylist == null || nombrePlaylist == "") {
+
+//     title.innerHTML = '<li class="title"> my playlist </li>'
+
+// } else{
+
+//     title.innerHTML = '<li class="title">' + nombrePlaylist + '</li>'
+
+// }
+
+
+// var preguntaUsuario = '¿Cuál es tu nombre?'
+// var nombreUsuario = prompt(preguntaUsuario)
+
+// let user = document.querySelector('.user');
+
+// if (nombreUsuario == null || nombreUsuario == "") {
+
+//     user.innerHTML = '<li class="user"> user </li>'
+
+// } else{
+
+//     user.innerHTML = '<li class="user"> ' + nombreUsuario + ' </li>'
+
+// }
+
+
+
+
 let storage = localStorage.getItem('playlist');
 let playlist = JSON.parse(storage);
 
@@ -7,7 +42,7 @@ let canciones = document.querySelector('.canciones');
 
 if(storage == null || storage == "[]"){
     playlist = [];
-    canciones.innerHTML += '<li> No hay canciones en tu playlist </li>'
+    canciones.innerHTML += '<li class="song"> No hay canciones en tu playlist </li>'
     console.log(canciones);
     
 } else {

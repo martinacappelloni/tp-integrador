@@ -2,10 +2,12 @@
     box-sizing: border-box;
     font-family: 'Assistant', sans-serif;
 }
-html{
+
+html {
     background: none;
     line-height: unset;
 }
+
 body {
     width: 100%;
     background-image: url(../img/fondo.png);
@@ -13,6 +15,7 @@ body {
     background-repeat: no-repeat;
     margin: 0px;
 }
+
 header {
     width: 100%;
     display: flex;
@@ -21,93 +24,111 @@ header {
     align-items: center;
     z-index: 1;
 }
-header .logo{
+
+header .logo {
     width: 100%;
 }
-header .logo .logo-header{
+
+header .logo .logo-header {
     width: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 20px auto;
 }
-header .logo .gif-logo{
+
+header .logo .gif-logo {
     display: none;
 }
-header .links{
+
+header .links {
     display: none;
 }
-.buscador{
+
+.buscador {
     display: none;
 }
-.slider{
+
+.slider {
     padding: 0 15px;
     margin-bottom: 62px;
 }
-.slider .titulo{
+
+.slider .titulo {
     color: white;
     text-transform: capitalize;
     font-size: 25px;
     margin: 0 0 15px;
 }
-.slider a{
+
+.slider a {
     text-decoration: none;
     color: white;
     text-transform: capitalize;
 }
-.slider .genres{
+
+.slider .genres {
     width: 100%;
     margin: 0 0 30px;
 }
-.slider .genres .lista-genres{
+
+.slider .genres .lista-genres {
     width: 100%;
     display: flex;
     /* flex-flow: row wrap; */
     justify-content: center;
     padding: 0;
-    margin: 0;    
+    margin: 0;
 }
-.slider .genres .lista-genres .genre{
+
+.slider .genres .lista-genres .genre {
     width: 45%;
     margin: 0 8px 15px;
     list-style: none;
     text-transform: capitalize;
     color: white;
 }
-.slider .genres .lista-genres .genre .genre-img{
+
+.slider .genres .lista-genres .genre .genre-img {
     width: 100%;
     border-radius: 20px;
     background: #434144;
-    box-shadow:  5px 5px 10px #1b1a1b, 
-             -5px -5px 10px #6b686d;
+    box-shadow: 5px 5px 10px #1b1a1b,
+        -5px -5px 10px #6b686d;
 }
-.slider .genres .lista-genres .genre .title{
+
+.slider .genres .lista-genres .genre .title {
     font-size: 18px;
     margin: 5px 0 2px;
 }
-.slider .genres .lista-genres .genre .artist{
+
+.slider .genres .lista-genres .genre .artist {
     font-size: 14px;
     margin: 0;
 }
-.mobile{
+
+.mobile {
     width: 100%;
     position: fixed;
     bottom: 0;
     left: 0;
     backdrop-filter: blur(6px);
 }
-.iconos{
+
+.iconos {
     margin: 0;
     padding: 20px 0;
     list-style: none;
     display: flex;
     justify-content: space-around;
 }
-.iconos li i{
+
+.iconos li i {
     font-size: 20px;
     color: white;
 }
-.desktop{
+
+.desktop {
     display: none;
 }
 
@@ -115,6 +136,7 @@ header .links{
     header .logo .logo-header {
         width: 8%;
     }
+
     .slider .genres .lista-genres .genre {
         width: 28%;
     }
@@ -122,11 +144,12 @@ header .links{
 
 
 @media only screen and (min-width:769px) {
-    body{
+    body {
         background-image: url(../img/fondo-desk.png);
         background-size: cover;
-        
+
     }
+
     header {
         position: fixed;
         top: 0;
@@ -134,17 +157,21 @@ header .links{
         justify-content: space-between;
         backdrop-filter: blur(10px);
     }
+
     header .logo {
         width: 15%;
         margin: 30px 0 10px;
     }
+
     header .logo .logo-header {
         width: 25%;
         margin: 0 50px;
     }
-    header .links{
+
+    header .links {
         display: unset;
     }
+
     header .links ul {
         width: 100%;
         display: flex;
@@ -152,14 +179,17 @@ header .links{
         padding: 0;
         list-style: none;
     }
-    header .links ul li{
+
+    header .links ul li {
         margin: 8px;
         padding: 3px 40px;
         border-right: 2px solid white;
     }
-    header .links ul li:last-child{
+
+    header .links ul li:last-child {
         border-right: none;
     }
+
     header .links ul li a {
         width: 100%;
         font-size: 20px;
@@ -170,56 +200,68 @@ header .links{
         align-items: center;
         justify-content: center;
     }
-    .buscador{
+
+    .buscador {
         display: unset;
         width: 20%;
         position: absolute;
         left: 200px;
     }
-    .buscador form{
+
+    .buscador form {
         display: block;
         margin: 0;
     }
-    .buscador form input{
+
+    .buscador form input {
         width: 80%;
         background-color: #302c2e;
         padding: 10px;
         border-radius: 10px;
-        border:none;
+        border: none;
         color: white;
     }
-    .buscador form button{
+
+    .buscador form button {
         color: white;
         background-color: #302c2e;
         padding: 10px;
         border-radius: 10px;
-        border:none;
+        border: none;
     }
-    .slider{
-        padding: 120px  50px 0;
+
+    .slider {
+        padding: 120px 50px 0;
     }
-    .slider .titulo{
+
+    .slider .titulo {
         font-size: 30px;
         margin: 20px 0;
     }
-    .slider .genres{
+
+    .slider .genres {
         margin: 30px 0 40px;
     }
-    .slider .genres .lista-genres{
+
+    .slider .genres .lista-genres {
         flex-flow: unset;
     }
-    .slider .genres .lista-genres .genre{
+
+    .slider .genres .lista-genres .genre {
         width: 15.4%;
         margin: 0 10px;
     }
-    .slider .genres .lista-genres .genre .title{
+
+    .slider .genres .lista-genres .genre .title {
         font-size: 20px;
         margin: 10px 0 5px;
     }
-    .mobile{
+
+    .mobile {
         display: none;
     }
-    .desktop{
+
+    .desktop {
         width: 100%;
         position: absolute;
         bottom: 0;
@@ -229,21 +271,26 @@ header .links{
         align-items: center;
         margin: 40px 0 15px 0;
     }
-    .desktop .nombres li:last-child{
+
+    .desktop .nombres li:last-child {
         border-right: none;
     }
-    .desktop .logo{
+
+    .desktop .logo {
         width: 15%;
     }
-    .desktop .logo .logo-footer{
+
+    .desktop .logo .logo-footer {
         width: 15%;
     }
+
     .desktop .nombres {
         display: flex;
         margin: 0;
         padding: 0;
     }
-    .desktop .nombres li  {
+
+    .desktop .nombres li {
         margin: 5px;
         padding: 3px 20px;
         border-right: 2px solid white;
@@ -254,21 +301,24 @@ header .links{
         justify-content: center;
         font-size: 15px;
     }
-    .desktop .nombres li a{
+
+    .desktop .nombres li a {
         text-decoration: none;
         color: white;
         transition: background-color .5s;
     }
+
     .desktop .nombres li a:hover {
         background-color: rgb(125, 0, 0);
         text-transform: capitalize;
-    } 
-    footer .deezer{
+    }
+
+    footer .deezer {
         width: 15%;
     }
-    footer .deezer .logo-deezer{
+
+    footer .deezer .logo-deezer {
         width: 18%;
         float: right;
     }
 }
-
